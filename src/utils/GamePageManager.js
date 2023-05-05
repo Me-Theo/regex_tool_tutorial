@@ -7,6 +7,8 @@
 
 // import game page
 import GameTitle from "../gamePage/GameTitle/GameTitle";
+import TestPage from "../gamePage/TestPage/TestPage";
+import LevelPage from "../gamePage/LevelPage/LevelPage";
 
 export default class GamePageManager{
     static instance;
@@ -15,7 +17,9 @@ export default class GamePageManager{
         GamePageManager.instance=this;
         this.container=container;
         this.pages={
-            "GameTitle":<GameTitle/>
+            "GameTitle":<GameTitle/>,
+            "TestPage":<TestPage/>,
+            "LevelPage":<LevelPage/>
         }
     }
 
@@ -26,6 +30,27 @@ export default class GamePageManager{
     static changePage(gameIndex){
         let i = GamePageManager.instance;
         if(i===undefined)return;
-        i.container.changeGamePage(i.pages[gameIndex]);
+        
+        let page=i.getPage(gameIndex);
+
+        i.container.changeGamePage(page);
+
+        // save last page
+        sessionStorage.setItem("lastPage",gameIndex);
+    }
+
+
+    /**
+     * Recupère la page demander ou renvoie sur une page par défaut si elle n'existe pas
+     * @param {string} name nom de la page
+     * @returns page compenent
+     */
+    getPage(name){
+        let page=this.pages[name];
+        // si la page n'existe pas
+        if(page==undefined){
+            page=this.pages["GameTitle"];
+        }
+        return page;
     }
 }

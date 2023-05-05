@@ -1,0 +1,128 @@
+.RegexSlideWord{
+    position: relative;
+    width: 100%;
+    height: 20px;
+
+    /*enpèche la selection du text*/
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+    .RegexSlideWord .inSlider{
+        position: absolute;
+        min-width: 90%;
+        background-color: var(--color-prime2);
+        min-height: 10px;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+        .RegexSlideWord .inSlider .cercle{
+            --size:20px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: var(--size);
+            height: var(--size);
+            border-radius: 100%;
+            background-color: black;
+            z-index: 1;
+        }
+
+        .RegexSlideWord .inSlider .right{
+            background-color: var(--color-right-background);
+            left: 100%;
+        }
+        .RegexSlideWord .inSlider .false{
+            background-color: var(--color-false-background);
+            left: 0%;
+        }
+
+    .RegexSlideWord .word{
+        --actualPos:50%;
+        --wordMoveDuration:0.25s;
+
+        position: absolute;
+        top:50%;
+        left: var(--actualPos);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        transition: left var(--wordMoveDuration);
+        font-size: 27px;
+        width: 90px;
+    }
+
+        .RegexSlideWord .valide{
+            color: var(--color-right-unlighted);
+        }
+
+        .RegexSlideWord .invalide{
+            color: var(--color-false-unlighted);
+        }
+
+        .RegexSlideWord .lighted-valide{
+            color: var(--color-right-lighted) !important;
+            animation: 0.25s lighted_anim linear !important;
+        }
+
+        .RegexSlideWord .lighted-invalide{
+            color: var(--color-false-lighted) !important;
+            animation: 0.25s lighted_anim linear !important;
+        }
+
+        /*lighted animation*/
+        @keyframes lighted_anim {
+            0%{
+                transform: translate(-50%, -50%) scale(1.3);
+            }
+            50%{
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+            100%{
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .RegexSlideWord .lighted-idle{
+            animation: 2s lighted-idle_anim cubic-bezier(0.3, 0.7, 1, 0.3) infinite !important;
+        }
+        
+        /*lighted animation*/
+        @keyframes lighted-idle_anim {
+            0%{
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50%{
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            100%{
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+
+
+    /*animation de squish du text*/
+    .RegexSlideWord .wordMove{
+        animation: var(--wordMoveDuration) wordMove_anim linear;
+    }
+
+    @keyframes wordMove_anim {
+        0%{
+            transform: translate(-50%, -50%) scaleY(1);;
+        }
+        25%{
+            transform: translate(-50%, -50%) scaleY(0.5);
+        }
+        75%{
+            transform: translate(-50%, -50%) scaleY(0.5);
+        }
+        100%{
+            transform: translate(-50%, -50%) scaleY(1);
+        }
+    }

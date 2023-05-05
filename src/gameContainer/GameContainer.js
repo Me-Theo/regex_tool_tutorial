@@ -15,9 +15,11 @@ class GameContainer extends React.Component {
     super(props);
     this.gamePageManager=new GamePageManager(this);
     this.container=React.createRef();
+
+    let lastPage=sessionStorage.getItem("lastPage")
     this.state={
       onTransi:false,
-      actualGamePage:this.gamePageManager.pages["GameTitle"]
+      actualGamePage:this.gamePageManager.getPage((lastPage!=null)?lastPage:"GameTitle")
     };
   }
   

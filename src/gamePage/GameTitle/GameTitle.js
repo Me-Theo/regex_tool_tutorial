@@ -4,7 +4,7 @@ import CustomButton from "../../compenent/CustomButton/CustomButton";
 
 function GameTitle() {
   return (
-    <div className="GamePage GameTitle" onClick={()=>{GamePageManager.changePage("MainMenu")}}>
+    <div className="GamePage GameTitle" onClick={()=>{GamePageManager.changePage("LevelPage")}}>
       <div className="GameLogo"></div>
       <label className="PressStart">Click to start</label>
     </div>

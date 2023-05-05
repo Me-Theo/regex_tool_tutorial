@@ -1,7 +1,13 @@
 :root{
-  --color1 : #fff;
-  --color2 : #fff;
-  --color3:#fff;
+  --color-background : #FEFBEA;
+  --color-prime1 : #3b221b;
+  --color-prime2: #130B09;
+  --color-false-lighted: #FF4B81;
+  --color-right-lighted: #4CFEB1;
+  --color-false-unlighted: #8f475c;
+  --color-right-unlighted: #4a8d70;
+  --color-false-background: #62222F;
+  --color-right-background:#143A0E;
 }
 
 .FloatingAnimation{
@@ -20,6 +26,7 @@
   }
 
 #gamePageContainer{
+  background-color: var(--color-background);
   position: absolute;
   top:0;
   left: 0;

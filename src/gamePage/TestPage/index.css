@@ -1,0 +1,21 @@
+.TestPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .TestPage h1{
+        font-size: 80px;
+        animation: 5s infinite upAndDown;
+    }
+
+    .TestPage .testZone{
+        display: flex;
+        max-width: 300px;
+        flex-wrap: wrap;
+    }
+
+    .TestPage .testregexShower{
+        background-color: var(--color-prime1);
+        width: 40%;
+        padding: 10px;
+    }
