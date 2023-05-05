@@ -1,0 +1,23 @@
+.GameTitle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+    .GameTitle .GameLogo{
+      width: 50%;
+      height: 50%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("https://pbs.twimg.com/media/FukxdjpXwCE6ZJE?format=jpg&name=medium");
+      animation-timing-function: linear;
+      animation: 5s infinite floatingAnimation_anim;
+    }
+
+    .GameTitle .PressStart{
+      font-size: 40px;
+      animation-timing-function: linear;
+      animation: 2s infinite upAndDown;
+    }

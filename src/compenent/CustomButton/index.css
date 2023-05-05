@@ -1,0 +1,63 @@
+.CustomButton{
+    position: relative;
+    font-family: Om_Botak;
+    background: none;
+    border-style: none;
+    margin:10px;
+    animation: 3s infinite Floating_anim ease-in-out;
+    transform: scale(1);
+    transition: tranform 1s;
+    }
+    @keyframes Floating_anim {
+        0%{
+            transform: translate(0,0);
+        }
+        50%{
+            transform: translate(0,-10%);
+        }
+        100%{
+            transform: translate(0,0);
+        }
+    }
+
+.CustomButton:enabled:hover{
+    transform: scale(1.1);
+    animation:none;
+    cursor:pointer;
+    animation: 2s infinite FloatingHover_anim cubic-bezier(0.3, 0.7, 1, 0.3);
+}
+    @keyframes FloatingHover_anim {
+        0%{
+            transform: scale(1.1) rotate(5deg);
+        }
+        25% {
+            transform: scale(1.15) rotate(-5deg)
+        }
+        50%{
+            transform: scale(1.2) rotate(5deg)
+        }
+        75%{
+            transform: scale(1.15) rotate(-5deg)
+        }
+        100%{
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+
+.CustomButton:enabled:hover::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    content: '';
+    display: inline-block;
+    border-radius: 99px;
+    width: 100%;
+    transform: rotate(-2deg);
+    height: 7px;
+    background: rgb(0, 0, 0)
+}
+
+.CustomButton:disabled{
+    opacity: 0.7;
+    animation:none;
+}
