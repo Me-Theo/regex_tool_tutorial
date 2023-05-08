@@ -5,7 +5,7 @@
  * @ Description: class qui permette de géré les mots a valider ou non dans les niveaux
  */
 
-export default class LevelAnswer{
+export default class LevelString{
     constructor(word,targetState){
         this.state=undefined;
         this.word=word;
@@ -13,8 +13,14 @@ export default class LevelAnswer{
     }
 
     checkRegex(regex){
-        let reg=RegExp(regex);
-        this.state=reg.test(this.word);
+        if(regex=="")return;
+        try{
+            let reg=RegExp(regex);
+            this.state=reg.test(this.word);
+        }
+        catch(e){
+            this.state=false;
+        }
         return this.state;
     }
 }

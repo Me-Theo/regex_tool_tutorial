@@ -1,0 +1,32 @@
+[
+    {
+        "thorieIndex":0,
+        "words":[
+            {
+                "text":"Word",
+                "targetState":true
+            }
+        ],
+        "placeHolder":"",
+        "limit":-1
+    },
+    {
+        "thorieIndex":0,
+        "words":[
+            {
+                "text":"sdad",
+                "targetState":false
+            },
+            {
+                "text":"Tool",
+                "targetState":true
+            },
+            {
+                "text":"asdas",
+                "targetState":false
+            }
+        ],
+        "placeHolder":"([A-Z])\\w",
+        "limit":-1
+    }
+]

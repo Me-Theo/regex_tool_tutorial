@@ -20,4 +20,5 @@
       font-size: 40px;
       animation-timing-function: linear;
       animation: 2s infinite upAndDown;
+      cursor: pointer;
     }

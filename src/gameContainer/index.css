@@ -49,26 +49,23 @@
   left: 0;
 }
 
-
+/*transion être les page (animation)*/
 .GamePageChange{
-  animation: 0.25s GamePageChange_anim;
+  animation: 0.25s GamePageChange_anim linear;
 }
 
   @keyframes GamePageChange_anim {
   0%{
-      transform: scale(1.5) rotate(-10deg);
+    transform: scale(1,0.4) rotate(10deg);
   }
-  50%{
-    transform: scale(1) rotate(5deg);
+  25%{
+    transform: scale(1, 1.2) rotate(5deg);
   }
   75%{
-    transform: rotate(-2.5deg);
-  }
-  90%{
-      transform: scale(1) rotate(1deg);
+    transform: scale(1.1, 0.9) rotate(2.5deg);;
   }
   100%{
-    transform: rotate(0deg);
+    transform: scale(1, 1);
   }
 }
 

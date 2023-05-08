@@ -4,11 +4,16 @@
  * @ Date: 16:34 19.04.2023
  * @ Description: permette de gerer les page du jeux pour faire des transi styler 
  */
-
+import SaveManger from "./SaveManager";
 // import game page
 import GameTitle from "../gamePage/GameTitle/GameTitle";
 import TestPage from "../gamePage/TestPage/TestPage";
 import LevelPage from "../gamePage/LevelPage/LevelPage";
+import LevelTransiton from "../gamePage/LevelTransition/LevelTransiton";
+import TheoriePage from "../gamePage/TheoriePage/TheoriePage";
+import TheoriTransiton from "../gamePage/TheorieTransition/TheorieTransiton";
+
+const errorPage="GameTitle";             // page sur le quel renvoyer si il y a une erreur
 
 export default class GamePageManager{
     static instance;
@@ -19,8 +24,12 @@ export default class GamePageManager{
         this.pages={
             "GameTitle":<GameTitle/>,
             "TestPage":<TestPage/>,
-            "LevelPage":<LevelPage/>
+            "LevelPage":<LevelPage/>,
+            "Level":<LevelTransiton/>,
+            "Theorie":<TheoriTransiton/>,
+            "TheoriePage":<TheoriePage/>
         }
+        this.exeptPage=["GameTitle","LevelPage","TheoriePage"];              // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
     }
 
     /**
@@ -35,7 +44,10 @@ export default class GamePageManager{
 
         i.container.changeGamePage(page);
 
-        // save last page
+        // save la dernière page visiter sauf si il s'agit d'une exeption
+        if(i.exeptPage.includes(gameIndex))return;
+
+        // save la denière page vister dans la sessions pour la charger vite
         sessionStorage.setItem("lastPage",gameIndex);
     }
 
@@ -49,8 +61,45 @@ export default class GamePageManager{
         let page=this.pages[name];
         // si la page n'existe pas
         if(page==undefined){
-            page=this.pages["GameTitle"];
+            page=this.pages[errorPage];
         }
         return page;
     }
+
+    //#region Level and theorie
+
+    /**
+     * laucneh a level + save the progresion
+     * @param {*} level 
+     * @returns 
+     */
+    static StartLevel(level,transion=true){
+
+        // check si le level est accécible par le joueur, si non -> maine menu 
+        if(SaveManger.data.levelProgression<level){
+            this.changePage(errorPage);
+            return;
+        }
+
+        sessionStorage.setItem("level",level);
+        this.changePage((transion)?"Level":"LevelPage");
+    }
+
+    /**
+     * laucneh a level + save the progresion
+     * @param {*} level 
+     * @returns 
+     */
+    static StartTheorie(theori,transion=true){
+        // check si la theori est accécible par le joueur, si non -> maine menu 
+        if(SaveManger.data.levelProgression<theori){
+            this.changePage(errorPage);
+            return;
+        }
+        sessionStorage.setItem("theorie",theori);
+        this.changePage((transion)?"Theorie":"TheoriePage");
+    }
+    
+
+    //#endregion
 }

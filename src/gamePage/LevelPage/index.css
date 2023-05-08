@@ -3,17 +3,186 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 
     .LevelPage .RegexContainer{
+        z-index: 1;
         background-color: var(--color-prime1 );
         padding: 20px;
-        width: 30%;
+        min-width: 30%;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        height: 40%;
+        animation: 5s regexContainerIdle_anim ease-in-out infinite;
+    }
+
+    @keyframes regexContainerIdle_anim {
+        0%{
+            transform: translateY(0%);
+        }
+        50%{
+            transform: translateY(3%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    /* tous le css de l'input text custome*/
+    .LevelPage .inputHolder{
+        z-index: 1;
+        --fontSize:20px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        padding:10px;
+        color: var(--color-prime1);
+        border-radius: 20px;
+        margin-top: 15px;
+        border-style: solid;
+        border-color: var(--color-prime1);
+        background-color: #ffffff;
+        border-width: 5px;
+
+        cursor: text;
+    }
+
+        .LevelPage .inputHolder .widthCal{
+            position: absolute;
+            opacity: 0;
+            font-size: var(--fontSize);
+        }
+
+        .LevelPage .inputHolder .embedValue{
+            font-size: var(--fontSize);
+            opacity: 0.5;
+
+            /*empèche la selection*/
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+
+        .LevelPage .inputHolder input{
+            font-size: var(--fontSize);
+            font-family: Om_Botak;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            width: 0px;
+            color: var(--color-prime1);
+            z-index: 1;
+        }
+
+            .LevelPage .inputHolder input:focus {
+                outline: none;
+            }
+    
+
+    .LevelPage .updateRegex{
+        animation: 0.15s regexContainerUpdate_anim ease-in-out;
+    }
+
+    @keyframes regexContainerUpdate_anim {
+        0%{
+            transform: scale(1.05);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+
+
+    .LevelPage .inputUpdate{
+        animation: 0.05s inputUpdate_anim ease-in-out;
+    }
+
+    
+    @keyframes inputUpdate_anim {
+        0%{
+            transform: scale(1.025) rotate(-2deg);
+        }
+        50%{
+            transform: scale(1.025) rotate(1deg);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    .LevelPage .LevelCompletInput{
+        background-color: var(--color-right-lighted);
+        border-color: var(--color-right-unlighted);
+        color: var(--color-right-unlighted);
+        animation: 0.25s levelCompletInput_anim ease-in-out;
+    }
+        .LevelPage .LevelCompletInput input{
+            color: var(--color-right-unlighted);
+        }
+
+    
+    @keyframes levelCompletInput_anim {
+        0%{
+            transform: scale(1.2);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+
+    /*Level clear*/
+
+    .LevelPage .LevelFinishMessage{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 200px;
+        background-color: var(--color-background);
+        animation: 1s LevelClear_anim ease-in-out;
+
+        /*empèche la selection*/
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        z-index: 2;
+        opacity: 0;
+    }
+
+    
+    @keyframes LevelClear_anim {
+        0%{
+            transform: scale(0.5) rotate(15deg);
+            opacity: 1;
+        }
+        12.5%{
+            transform: scale(1.2) rotate(-10deg);
+        }
+        25%{
+            transform: scale(1) rotate(5deg);
+        }
+        37.5%{
+            transform: scale(1) rotate(-2.5deg);
+        }
+        50%{
+            transform: scale(1);
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
     }

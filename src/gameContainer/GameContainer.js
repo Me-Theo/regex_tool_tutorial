@@ -9,17 +9,27 @@
 import "./index.css";
 import React from 'react';
 import GamePageManager from "../utils/GamePageManager";
+import SaveManger from "../utils/SaveManager";
 
 class GameContainer extends React.Component {
   constructor(props) {
     super(props);
+
+    // setup game page manager 
     this.gamePageManager=new GamePageManager(this);
     this.container=React.createRef();
 
-    let lastPage=sessionStorage.getItem("lastPage")
+    // charge la denière page visiter (sessions), si pas -> Game title
+    let lastLevel=sessionStorage.getItem("lastPage");
+    let startPage=this.gamePageManager.getPage((lastLevel!=null)?lastLevel:"GameTitle");
+
+    // load la savgarde
+    SaveManger.load();
+
+    
     this.state={
       onTransi:false,
-      actualGamePage:this.gamePageManager.getPage((lastPage!=null)?lastPage:"GameTitle")
+      actualGamePage:startPage
     };
   }
   

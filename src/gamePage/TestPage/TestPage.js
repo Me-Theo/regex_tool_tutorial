@@ -9,7 +9,7 @@ import "./index.css"
 import CustomButton from '../../compenent/CustomButton/CustomButton';
 import GamePageManager from "../../utils/GamePageManager";
 import RegexSlideWord from '../../compenent/RegexSlideWord/RegexSlideWord';
-import LevelAnswer from '../../gameClass/levelAnswer';
+import LevelAnswer from '../../gameClass/LevelString';
 
 export default function TestPage() {
 
