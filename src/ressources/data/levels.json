@@ -14,7 +14,7 @@
         "thorieIndex":0,
         "words":[
             {
-                "text":"sdad",
+                "text":"Regex",
                 "targetState":false
             },
             {
@@ -22,11 +22,11 @@
                 "targetState":true
             },
             {
-                "text":"asdas",
+                "text":"Tutorial",
                 "targetState":false
             }
         ],
-        "placeHolder":"([A-Z])\\w",
+        "placeHolder":"regex",
         "limit":-1
     }
 ]

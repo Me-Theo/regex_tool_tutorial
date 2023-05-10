@@ -7,8 +7,8 @@ function GameTitle() {
   return (
     <div className="GamePage GameTitle" onClick={()=>{
       // check si le joueur a une savgarde, si non -> tuto start, si oui -> la page ou il ce trouvais
-        if(SaveManger.data.levelProgression>0){
-          GamePageManager.StartTheorie(0);
+        if(SaveManger.data.levelProgression==0){
+          GamePageManager.StartLevel(0);
         }else{
           GamePageManager.changePage("MainMenu");
         }

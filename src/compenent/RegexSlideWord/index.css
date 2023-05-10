@@ -2,11 +2,6 @@
     position: relative;
     width: 100%;
     height: 20px;
-
-    /*enpèche la selection du text*/
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
     margin: 20px;
 }
 
@@ -54,6 +49,21 @@
         text-align: center;
         z-index: 2;
         transition: left var(--wordMoveDuration);
+        text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .RegexSlideWord .word::before{
+        position: absolute;
+        background-color: var(--color-prime1);
+        min-width: 25px;
+        min-height: 25px;
+        border-radius: 15px;
+        transform: translate(-50%,-50%);
+        content: " ";
+        top:50%;
+        left: 50%;
+        z-index: -1;
+        opacity: 0;
     }
 
         .RegexSlideWord .valide{

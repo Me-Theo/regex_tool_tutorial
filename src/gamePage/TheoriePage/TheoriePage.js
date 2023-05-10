@@ -19,6 +19,13 @@ export default function TheoriePage() {
     const [imgsrc, setImgsrc]=useState(""); 
 
     useEffect(()=>{
+
+        // check si la session est correct, si non -> maine menu
+        if(sessionStorage.getItem("theorie")==null){
+            GamePageManager.changePage("MainMenu");
+            return;
+        }
+
         let data = DataLoader.getTheorieData(sessionStorage.getItem("theorie"));
         setTitle(data.name);
         setText(data.text);

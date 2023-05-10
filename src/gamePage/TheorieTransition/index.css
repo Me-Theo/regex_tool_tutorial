@@ -7,9 +7,6 @@
 
 
     .GameLevelTrasition h1{
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
         font-size: 120px;
         margin: 0;
     }

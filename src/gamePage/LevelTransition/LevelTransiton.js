@@ -23,7 +23,7 @@ export default function LevelTransiton() {
 
     return (
         <div className="GamePage GameLevelTrasition">
-            <h1>Level {(Number(sessionStorage.getItem("level"))+1)}</h1>
+            <h1 className="NoSelect">Level {(Number(sessionStorage.getItem("level"))+1)}</h1>
         </div>
     );
 }

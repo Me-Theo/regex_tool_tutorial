@@ -104,7 +104,7 @@ export default class RegexSlideWord extends React.Component {
   /* render element */
   render() {
     return (
-        <div className="RegexSlideWord" ref={this.regexSlider}>
+        <div className="RegexSlideWord NoSelect" ref={this.regexSlider}>
           <div className="inSlider">
             <div className="cercle false"></div>
             <div className="cercle right"></div>

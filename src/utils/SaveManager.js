@@ -56,4 +56,9 @@ export default class SaveManger{
         let d = JSON.stringify(SaveManger.data);
         document.cookie="save="+d+"; expires="+now.toUTCString()+"; path=/";
     }
+
+    static reste(){
+        let actualData = new SaveManger(0,0);
+        this.save();
+    }
 }

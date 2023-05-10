@@ -1,14 +1,3 @@
-:root{
-  --color-background : #FEFBEA;
-  --color-prime1 : #3b221b;
-  --color-prime2: #130B09;
-  --color-false-lighted: #FF4B81;
-  --color-right-lighted: #4CFEB1;
-  --color-false-unlighted: #8f475c;
-  --color-right-unlighted: #4a8d70;
-  --color-false-background: #62222F;
-  --color-right-background:#143A0E;
-}
 
 .FloatingAnimation{
   animation: 1s infinite floatingAnimation_anim;
@@ -39,12 +28,25 @@
   overflow: hidden;
 }
 
+.GamePageContainer{
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .GamePage{
   padding: 0;
   margin:0;
   width: 100%;
   height: 100%;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
 }
@@ -82,4 +84,21 @@
   }
 }
 
+@keyframes pop {
+  0%{
+      transform: scale(0);
+  }
+  50%{
+      transform: scale(1.2);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+
+
+.PageTitle{
+  font-size: 100px;
+  animation: 5s infinite upAndDown;
+}
   

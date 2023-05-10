@@ -1,0 +1,62 @@
+.Credit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .Credit .CreditMember{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: 3s infinite CreditMember_anim;
+    }
+
+    @keyframes CreditMember_anim {
+        0%{
+            transform: translate(0,0);
+        }
+        50%{
+            transform: translate(0,-5%);
+        }
+        100%{
+            transform: translate(0,0);
+        }
+      }
+        .Credit .CreditMember .Role{
+            font-size: 30px;
+        }
+        .Credit .CreditMember .Perso{
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: var(--color-prime2);
+            -webkit-mask-image: url("../../ressources/image/SVG/MeDrawMe.svg");
+        }
+        .Credit .CreditMember .Social{
+            margin-top: 10px;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            color: var(--color-prime2);
+            text-decoration: none;
+        }
+
+            .Credit .CreditMember .Social:hover::after {
+                position: absolute;
+                bottom: -7px;
+                content: '';
+                display: inline-block;
+                border-radius: 99px;
+                width: 40%;
+                transform: rotate(-2deg);
+                height: 5px;
+                background: var(--color-prime2);
+            }
+
+            .Credit .CreditMember .Social .twitterLogo{
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+                background-color: var(--color-prime2);
+                -webkit-mask-image: url("../../ressources/image/SVG/BetterTwiterLogo.svg");
+            }

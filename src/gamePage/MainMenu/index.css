@@ -1,0 +1,49 @@
+.MainMenu{
+    flex-direction: column;
+}
+
+    .MainMenu .Menu{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        margin-top: 50px;
+    }
+
+        .MainMenu .Menu .SubMenu{
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+            .MainMenu .Menu .SubMenu .MenuBnt{
+                max-width: 33%;
+                min-width: 33%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        .MainMenu .Menu .PlayBnt{
+            justify-content: center;
+        }
+    
+    
+    .MainMenu .LogoContainer{
+        min-height: 30%;
+        background-color: aqua;
+        min-width: 30%;
+    }
+
+
+@media only screen and (max-width: 600px) {
+    .MainMenu .Menu div{
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

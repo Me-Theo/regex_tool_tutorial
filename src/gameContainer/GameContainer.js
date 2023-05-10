@@ -10,6 +10,7 @@ import "./index.css";
 import React from 'react';
 import GamePageManager from "../utils/GamePageManager";
 import SaveManger from "../utils/SaveManager";
+import ColorManager from "../utils/ColorManager";
 
 class GameContainer extends React.Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class GameContainer extends React.Component {
     // load la savgarde
     SaveManger.load();
 
+    // load la pallet
+    ColorManager.setPallette(SaveManger.data.palet);
     
     this.state={
       onTransi:false,
@@ -53,7 +56,7 @@ class GameContainer extends React.Component {
   render() {
     return (
       <div id="gamePageContainer">
-        <div className="GamePage GamePageChange" ref={this.container}>
+        <div className="GamePageContainer GamePageChange" ref={this.container}>
           {this.state.actualGamePage}
         </div>
       </div>

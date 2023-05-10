@@ -4,19 +4,26 @@
     background: none;
     border-style: none;
     margin:10px;
-    animation: 3s infinite Floating_anim ease-in-out;
+    animation: 3s infinite Floating_anim cubic-bezier(0.3, 0.7, 1, 0.3);
+    color: var(--color-prime2);
     transform: scale(1);
     transition: tranform 1s;
     }
     @keyframes Floating_anim {
         0%{
-            transform: translate(0,0);
+            transform: translate(0,0) rotate(-2deg) scale(0.975, 1.025);
+        }
+        25%{
+            transform: translate(0,-10%) rotate(0);
         }
         50%{
-            transform: translate(0,-10%);
+            transform: translate(0,0) rotate(2deg) scale(1.025, 0.975);
+        }
+        75%{
+            transform: translate(0,-10%) rotate(0);
         }
         100%{
-            transform: translate(0,0);
+            transform: translate(0,0) rotate(-2deg) scale(0.975, 1.025);
         }
     }
 
@@ -54,7 +61,7 @@
     width: 100%;
     transform: rotate(-2deg);
     height: 7px;
-    background: rgb(0, 0, 0)
+    background: var(--color-prime2);
 }
 
 .CustomButton:disabled{

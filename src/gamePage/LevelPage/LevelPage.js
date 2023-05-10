@@ -19,6 +19,7 @@ import userEvent from '@testing-library/user-event';
 export default function LevelPage(props) {
 
   const data=useRef(null);
+  const levelNumber=useRef(null);
 
   // slider container
   const regexSliderContainer=useRef(null);
@@ -34,18 +35,28 @@ export default function LevelPage(props) {
   // player text input
   const playerInput=useRef(null);
   const playerInputText=useRef(null);
-  const playerInputWidthCal=useRef(null)
+  const playerInputWidthCal=useRef(null);
+  const [regexStartAndEnd,setRegexStartAndEnd]=useState(["/","/g"]);    // caractère au début et la fin de la regex
+
 
   // level complet
   const [isLevelFinish,setIsLevelFinish]=useState(false);
   const [showLevelCompetMessage,setShowLevelCompetMessage]=useState(false);
+  const [showNextLevelMessage,setShowNextLevelMessage]=useState(false);
   
 
   // satrt set up
   useEffect(()=>{
-    // importe les données du niveaux
-    let d = data.current =DataLoader.getLevelData(sessionStorage.getItem("level"));
+    // check si la session est correct, si non -> maine menu
+    if(sessionStorage.getItem("level")==null){
+      GamePageManager.changePage("MainMenu");
+      return;
+    }
 
+
+    // importe les données du niveaux
+    levelNumber.current=sessionStorage.getItem("level");
+    let d = data.current =DataLoader.getLevelData(levelNumber.current);
     levelString.current=d.strings;
 
     // create level slider
@@ -59,6 +70,10 @@ export default function LevelPage(props) {
     if(d.placeHolder!=""){
       onInputChange(d.placeHolder);
     }
+
+    // focus le text input
+    playerInputText.current.focus();
+
   },[])
 
 
@@ -74,9 +89,6 @@ export default function LevelPage(props) {
    * Update all regex slider word 
    */
   function updateRegexSliderWord(regex=""){
-
-    if(!checkIfRegex(regex))return;
-
 
     let isLevelFinish=true;
     let change = false;
@@ -107,11 +119,26 @@ export default function LevelPage(props) {
     if(isLevelFinish){
       setIsLevelFinish(isLevelFinish);
 
-      // affiche l'animation sur la regex
-
-
       // affiche le level complet message
       setShowLevelCompetMessage(true);
+
+      // update la porgresion du joueur
+      UpdateProgression();
+
+      setTimeout(()=>{
+        setShowNextLevelMessage(true);
+        
+        /*
+        // losque le niveau est fini, permette de pass au nievau suivant en apuiant sur la bar espace
+        let onPressSpaceBar=(e)=>{
+          if(e.code=="Space"){
+            GamePageManager.changePage("Title");
+            document.body.removeEventListener("keypress",onPressSpaceBar);
+          }
+        }
+        document.body.addEventListener('keypress', onPressSpaceBar);
+        */
+      },500);
     }
   }
 
@@ -162,12 +189,14 @@ export default function LevelPage(props) {
 
   //#region Utils
 
-  /**
-   * Check si l'input donner est une regex ou pas
-   * @param {string} input 
-   */
-  function checkIfRegex(input){
-    return true;
+  /*
+    update la progressions du joueur
+  */
+  function UpdateProgression(){
+    if(SaveManger.data.levelProgression==levelNumber.current){
+      SaveManger.data.levelProgression+=1;
+      SaveManger.save();
+    }
   }
 
   //#endregion
@@ -204,7 +233,11 @@ export default function LevelPage(props) {
    * @param {string} value 
    */
   function changeInputWidth(value){
-    playerInputWidthCal.current.innerHTML=value;
+    /* 
+    l'espace est pas considérér comme un caractère visible, du coup, il faut les remplacer par 
+    autre chose pour que la taille sois correct. du coup, il faut juste remplacer les espace par des espaces incécable
+    */
+    playerInputWidthCal.current.innerHTML=value.replaceAll(" ","&nbsp");;
     let width=playerInputWidthCal.current.offsetWidth;
     playerInputText.current.style.width=width+"px";
   }
@@ -220,7 +253,7 @@ export default function LevelPage(props) {
         <div className={"inputHolder "+(+(isLevelFinish)?" LevelCompletInput":"")} ref={playerInput} onClick={()=>{
           playerInputText.current.focus();
         }}>
-          <span className='embedValue'>/</span>
+          <span className='embedValue NoSelect'>{regexStartAndEnd[0]}</span>
           <input
             className={isLevelFinish?"LevelCompletInput":""}
             type="text" 
@@ -230,11 +263,19 @@ export default function LevelPage(props) {
             disabled={isLevelFinish}
           />
           <span className='widthCal' ref={playerInputWidthCal}></span>
-          <span className='embedValue'>/g</span>
+          <span className='embedValue NoSelect'>{regexStartAndEnd[1]}</span>
         </div>
         {
-          showLevelCompetMessage?<div className='LevelFinishMessage'>
-            Level Clear !!!
+          showLevelCompetMessage?<div className='LevelFinishMessage NoSelect'>
+            <h1>Level Clear :)</h1>
+          </div>:null
+        }
+        {
+          showNextLevelMessage?<div className='NextLevelNotif'>
+             <CustomButton title={"Next"} fontSize={40} onClick={()=>{
+              // go next level
+              GamePageManager.StartLevel(Number.parseInt(levelNumber.current)+1);
+             }}/>
           </div>:null
         }
     </div>

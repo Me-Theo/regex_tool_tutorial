@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 
 export default function CustomButton(props) {
   return (
-    <button className={"CustomButton "+props.addClass} disabled={(props.disabel)?true:false} style={{fontSize:props.fontSize,...props.addStyle}} onClick={props.onClick}>
+    <button className={"CustomButton "+((props.addClass!=undefined)?props.addClass:"")} disabled={(props.disabel)?true:false} style={{fontSize:props.fontSize,...props.addStyle}} onClick={props.onClick}>
         {props.title}
     </button>
   );

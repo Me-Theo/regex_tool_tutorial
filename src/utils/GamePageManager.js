@@ -12,8 +12,12 @@ import LevelPage from "../gamePage/LevelPage/LevelPage";
 import LevelTransiton from "../gamePage/LevelTransition/LevelTransiton";
 import TheoriePage from "../gamePage/TheoriePage/TheoriePage";
 import TheoriTransiton from "../gamePage/TheorieTransition/TheorieTransiton";
+import MainMenu from "../gamePage/MainMenu/MainMenu";
+import Credit from "../gamePage/Credit/Credit";
+import Settings from "../gamePage/Settings/Settings";
+import DataLoader from "./DataLoader";
 
-const errorPage="GameTitle";             // page sur le quel renvoyer si il y a une erreur
+const errorPage="MainMenu";             // page sur le quel renvoyer si il y a une erreur
 
 export default class GamePageManager{
     static instance;
@@ -27,7 +31,10 @@ export default class GamePageManager{
             "LevelPage":<LevelPage/>,
             "Level":<LevelTransiton/>,
             "Theorie":<TheoriTransiton/>,
-            "TheoriePage":<TheoriePage/>
+            "TheoriePage":<TheoriePage/>,
+            "MainMenu":<MainMenu/>,
+            "Credit":<Credit/>,
+            "Settings":<Settings/>
         }
         this.exeptPage=["GameTitle","LevelPage","TheoriePage"];              // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
     }
@@ -76,7 +83,7 @@ export default class GamePageManager{
     static StartLevel(level,transion=true){
 
         // check si le level est accécible par le joueur, si non -> maine menu 
-        if(SaveManger.data.levelProgression<level){
+        if(SaveManger.data.levelProgression<level || level>DataLoader.getNumberOfLevel()){
             this.changePage(errorPage);
             return;
         }

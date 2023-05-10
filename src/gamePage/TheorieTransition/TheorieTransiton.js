@@ -23,7 +23,7 @@ export default function TheoriTransiton() {
 
     return (
         <div className="GamePage GameLevelTrasition">
-            <h1>Theori</h1>
+            <h1 className="NoSelect">Theori</h1>
         </div>
     );
 }
