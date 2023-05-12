@@ -40,5 +40,12 @@
         "valide":"#85FE4C",
         "invalide":"#FF374F",
         "progressionUnlock":0
+    },
+    {
+        "maine":"#0075FF",
+        "background":"#ffffff",
+        "valide":"#00FF99",
+        "invalide":"#ff0055",
+        "progressionUnlock":0
     }
 ]

@@ -14,6 +14,7 @@ import LevelString from '../../gameClass/LevelString';
 import DataLoader from '../../utils/DataLoader';
 import SaveManger from '../../utils/SaveManager';
 import userEvent from '@testing-library/user-event';
+import TheoireIcon from '../../compenent/TheorieIcon/ThoerieIcon';
 
 
 export default function LevelPage(props) {
@@ -57,6 +58,13 @@ export default function LevelPage(props) {
     // importe les données du niveaux
     levelNumber.current=sessionStorage.getItem("level");
     let d = data.current =DataLoader.getLevelData(levelNumber.current);
+
+    // si d == null c'est que le niveau n'exite pas donc -> maine menu
+    if(d==null){
+      GamePageManager.changePage("MainMenu");
+      return;
+    }
+
     levelString.current=d.strings;
 
     // create level slider
@@ -247,6 +255,19 @@ export default function LevelPage(props) {
 
   return (
     <div className="GamePage LevelPage">
+        <div className='Ui'>
+          <button className='ThoerieBnt' onClick={()=>{GamePageManager.StartTheoriePage(sessionStorage.getItem("theorie"),true);}}>
+            <div className='Icon'>
+              <TheoireIcon/>
+            </div>
+            <label>Théorie</label>
+          </button>
+          <button className='HomeBnt SvgContainer' onClick={()=>{
+            GamePageManager.changePage("MainMenu");
+          }}>
+
+          </button>
+        </div>
         <div className='RegexContainer' ref={regexSliderContainer}>
           {sliderCompenents}
         </div>
@@ -264,18 +285,18 @@ export default function LevelPage(props) {
           />
           <span className='widthCal' ref={playerInputWidthCal}></span>
           <span className='embedValue NoSelect'>{regexStartAndEnd[1]}</span>
+          {
+          showNextLevelMessage?<div className='NextLevelNotif'>
+              <CustomButton title={"Next"} fontSize={40} onClick={()=>{
+                // go next level
+                GamePageManager.StartLevelTheorie(Number.parseInt(levelNumber.current)+1);
+              }}/>
+            </div>:null
+          }
         </div>
         {
           showLevelCompetMessage?<div className='LevelFinishMessage NoSelect'>
             <h1>Level Clear :)</h1>
-          </div>:null
-        }
-        {
-          showNextLevelMessage?<div className='NextLevelNotif'>
-             <CustomButton title={"Next"} fontSize={40} onClick={()=>{
-              // go next level
-              GamePageManager.StartLevel(Number.parseInt(levelNumber.current)+1);
-             }}/>
           </div>:null
         }
     </div>

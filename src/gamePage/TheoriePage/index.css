@@ -1,2 +1,40 @@
 .TheoriePage{
-}
+    flex-direction: column;
+    justify-content: flex-start;
+}   
+
+    .TheoriePage .TheoriePart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 60%;
+    }
+    .TheoriePage .PageTitle{
+        margin: 0;
+        margin-top: 30px;
+    }
+    .TheoriePage p{
+        font-size: 23px;
+        width: 30%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .TheoriePage .Exemple{
+        width: 40%;
+        min-height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .TheoriePage .Exemple>div{
+        min-width: 100%;
+        min-height: 100%;
+        background-color: aqua;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }

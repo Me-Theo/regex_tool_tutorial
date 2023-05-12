@@ -1,6 +1,7 @@
 [
     {
-        "thorieIndex":0,
+        "startTheorie":true,
+        "theorieIndex":0,
         "words":[
             {
                 "text":"Word",
@@ -11,7 +12,8 @@
         "limit":-1
     },
     {
-        "thorieIndex":0,
+        "startTheorie":false,
+        "theorieIndex":1,
         "words":[
             {
                 "text":"Regex",
@@ -23,6 +25,16 @@
             },
             {
                 "text":"Tutorial",
+                "targetState":false
+            },            {
+                "text":"Regex",
+                "targetState":false
+            },
+            {
+                "text":"Tutorial",
+                "targetState":false
+            },            {
+                "text":"Regex",
                 "targetState":false
             }
         ],

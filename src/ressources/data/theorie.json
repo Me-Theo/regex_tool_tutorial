@@ -1,7 +1,12 @@
 [
     {
         "name":"Basic",
-        "text":"jdskajdklajkwdjalkjdkwa",
-        "imagLink":"https://pbs.twimg.com/media/FukxdjpXwCE6ZJE?format=jpg&name=medium"
+        "text":"Une regex est un motif de recherche qui permet de chercher des correspondances dans du texte en utilisant des règles de syntaxe spécifiques.",
+        "imagLink":"https://pbs.twimg.com/media/Fvd2v7RXoAA9A2i?format=jpg&name=4096x4096"
+    },
+    {
+        "name":"notBasic",
+        "text":"Une regex est un motif de recherche qui permet de chercher des correspondances dans du texte en utilisant des règles de syntaxe spécifiques.",
+        "imagLink":"https://pbs.twimg.com/media/Fvd2v7RXoAA9A2i?format=jpg&name=4096x4096"
     }
 ]

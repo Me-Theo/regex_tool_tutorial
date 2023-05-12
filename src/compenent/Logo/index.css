@@ -1,0 +1,45 @@
+.Logo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: 2s infinite Logo_anim cubic-bezier(0.3, 0.7, 1, 0.3);
+}
+    @keyframes Logo_anim {
+        0%{
+            transform: scale(1.025,0.975);
+        }
+        50%{
+            transform: scale(0.975,1.025);
+        }
+        100%{
+            transform: scale(1.025,0.975);
+        }
+    }
+
+    .Logo .LogoPart{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%,-50%);
+    }
+
+    .Logo .MainContainer{
+        width: 100%;
+        height: 100%;
+    }
+
+    .Logo .Word1{
+        background-color: var(--color-false-lighted);
+        -webkit-mask-image: url("../../ressources/image/SVG/Logo/P1.svg");
+    }
+    
+    .Logo .Word2{
+        background-color: var(--color-right-lighted);
+        -webkit-mask-image: url("../../ressources/image/SVG/Logo/P2.svg");
+    }
+    .Logo .Shadow{
+        background-color: var(--color-prime2);
+        -webkit-mask-image: url("../../ressources/image/SVG/Logo/P3.svg");
+    }

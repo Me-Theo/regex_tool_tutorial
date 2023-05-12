@@ -25,6 +25,9 @@ export default class DataLoader{
         if(Number.isNaN(n))return null;
 
         let data=levelData[n];
+
+        if(data==undefined || data==null)return null;
+        
         let strings=[];
         for (let index = 0; index < data.words.length; index++) {
             const element = data.words[index];
@@ -34,7 +37,8 @@ export default class DataLoader{
             strings:strings,
             placeHolder:data.placeHolder,
             limit:data.limit,
-            theorie:data.thorieIndex
+            theorie:data.theorieIndex,
+            hasStartTheorie:data.startTheorie
         }
     }
 

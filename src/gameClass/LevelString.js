@@ -6,8 +6,8 @@
  */
 
 export default class LevelString{
-    constructor(word,targetState){
-        this.state=undefined;
+    constructor(word,targetState,baseState=undefined){
+        this.state=baseState;
         this.word=word;
         this.targetState=targetState;
     }

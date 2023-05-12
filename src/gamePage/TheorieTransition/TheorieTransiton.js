@@ -18,7 +18,7 @@ export default function TheoriTransiton() {
         if(sessionStorage.getItem("theorie")==null){
             sessionStorage.setItem("theorie",0);
         }
-        setTimeout(()=>GamePageManager.changePage("TheoriePage"),750);
+        setTimeout(()=>GamePageManager.changePage("LevelTheoriePage"),750);
     },[]);
 
     return (

@@ -2,6 +2,7 @@ import "./index.css";
 import GamePageManager from "../../utils/GamePageManager";
 import CustomButton from "../../compenent/CustomButton/CustomButton";
 import SaveManger from "../../utils/SaveManager";
+import Logo from "../../compenent/Logo/Logo";
 
 function GameTitle() {
   return (
@@ -13,7 +14,9 @@ function GameTitle() {
           GamePageManager.changePage("MainMenu");
         }
       }}>
-      <div className="GameLogo"></div>
+      <div className="GameLogo">
+        <Logo/>
+      </div>
       <label className="PressStart">Click to start</label>
     </div>
   );

@@ -1,0 +1,65 @@
+.LevelSelectPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .LevelSelectPage .LevelSelectBntContainer{
+        width: 70%;
+        height: 60%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+        .LevelSelectPage .LevelSelectBntContainer .LevelSelectBnt{
+            --size:calc((100% / 5) - 60px);
+
+            width: max(70px,var(--size));
+            height: auto;
+
+            border: solid var(--color-prime2) 5px;
+            border-radius: 20px;
+
+            font-size: 37px;
+            font-family: Om_Botak;
+            color: var(--color-prime2);;
+
+            background-color: var(--color-background);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 30px;
+        }
+
+        .LevelSelectPage .LevelSelectBntContainer .LevelSelectBnt:enabled:hover{
+            cursor: pointer;
+            animation: 0.25s LevelSelectBntHover_anim ease-in-out;
+            transform: scale(1.2);
+        }
+        @keyframes LevelSelectBntHover_anim {
+            0%{
+                transform: scale(1);
+            }
+            25%{
+                transform: scale(1.2) rotate(-10deg);
+            }
+            50%{
+                transform: scale(1.2) rotate(5deg);
+            }
+            75%{
+                transform: scale(1.2) rotate(-2.5deg);
+            }
+            100%{
+                transform: scale(1.2);
+            }
+        }
+
+
+        .LevelSelectPage .LevelSelectBntContainer .LevelSelectBnt:disabled{
+            opacity: 0.5;
+        }

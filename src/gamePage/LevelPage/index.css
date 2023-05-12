@@ -6,7 +6,112 @@
     position: relative;
 }
 
+/*#region Ui*/
+    .LevelPage .Ui{
+        position: absolute;
+        width:100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation: 0.35s Ui_anim ease-in-out;
+    }
+    @keyframes Ui_anim {
+        0%{
+            transform: scale(1.5);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
 
+        .LevelPage .Ui .ThoerieBnt{
+            position: absolute;
+            top: 25px;
+            right: -170px;
+            width: 250px;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: var(--color-prime2);
+            border-width: 5px;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            transform: scale(1);
+            transition: 0.15s right, 0.15s transform;
+            background-color: var(--color-background2);
+            cursor: pointer;
+        }
+
+            .LevelPage .Ui .ThoerieBnt .Icon{
+                width: 60px;
+                height: 60px;
+            }
+            .LevelPage .Ui .ThoerieBnt label{
+                font-family: Om_Botak;
+                font-size: 40px;
+                margin-left: 20px;
+                color: var(--color-prime2);
+                cursor: pointer;
+            }
+        
+        .LevelPage .Ui .ThoerieBnt:hover{
+            right: 10px;
+            transform: scale(1.2)  translate(0,5%);
+            cursor: pointer;
+        }
+    
+
+    .LevelPage .Ui .HomeBnt{
+        width: 50px;
+        height: 50px;
+        margin: 25px;
+
+        background-color: var(--color-prime2);
+        -webkit-mask-image: url("../../ressources/image/SVG/MainMenuIcon.svg");
+        cursor: pointer;
+
+        animation: 3s infinite HomeBntIdl_anim ease-in-out;
+    }
+    @keyframes HomeBntIdl_anim {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(0.9 ,1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    .LevelPage .Ui .HomeBnt:hover{
+
+        animation: 0.25s HomeBntHover_anim ease-in-out;
+        transform: scale(1.2);
+    }
+    @keyframes HomeBntHover_anim {
+        0%{
+            transform: scale(1);
+        }
+        25%{
+            transform: scale(1.2) rotate(-10deg);
+        }
+        50%{
+            transform: scale(1.2) rotate(5deg);
+        }
+        75%{
+            transform: scale(1.2) rotate(-2.5deg);
+        }
+        100%{
+            transform: scale(1.2);
+        }
+    }
+/*#endregion */
+
+
+
+/*#region RegexContainer*/
     .LevelPage .RegexContainer{
         z-index: 1;
         background-color: var(--color-prime1 );
@@ -133,12 +238,16 @@
         }
     }
 
+/*#endregion */
 
+
+
+/*#region LevelFinishMessage*/
     /*Level clear*/
 
     .LevelPage .LevelFinishMessage{
         position: absolute;
-        top: 5%;
+        top: 0px;
         left: 0;
         width: 100%;
         height: 30%;
@@ -146,8 +255,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 150px;
+        font-size: 10vw;
         animation: 0.5s LevelClearSpawn_anim ease-in-out;
+
+        --strokeSize:3px;
+
+        text-shadow: calc(-1 * var(--strokeSize)) calc(-1 * var(--strokeSize)) 0 var(--color-background), 
+        var(--strokeSize) calc(-1 * var(--strokeSize)) 0 var(--color-background), 
+        calc(-1 * var(--strokeSize)) var(--strokeSize) 0 var(--color-background), 
+        var(--strokeSize) var(--strokeSize) 0 var(--color-background);
         z-index: 2;
     }
     
@@ -157,7 +273,7 @@
                 top:-50%;
             }
             25%{
-                top:5%; transform: scale(0.75,1.25);
+                top:0; transform: scale(0.75,1.25);
             }
             26%{
                 transform: scale(1.2) rotate(-10deg);
@@ -214,7 +330,7 @@
 
     .LevelPage .NextLevelNotif{
         position: absolute;
-        bottom: 20%;
+        bottom: -200%;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -239,3 +355,11 @@
         font-size: 30px;
         animation: 3s infinite Floating_anim ease-in-out;
     }
+
+/*#endregion */
+
+@media only screen and (min-width: 1500px) {
+    .LevelPage .LevelFinishMessage{
+        font-size: 150px;
+    }
+}

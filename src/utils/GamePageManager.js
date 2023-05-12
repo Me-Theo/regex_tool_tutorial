@@ -5,6 +5,7 @@
  * @ Description: permette de gerer les page du jeux pour faire des transi styler 
  */
 import SaveManger from "./SaveManager";
+import DataLoader from "./DataLoader";
 // import game page
 import GameTitle from "../gamePage/GameTitle/GameTitle";
 import TestPage from "../gamePage/TestPage/TestPage";
@@ -15,7 +16,7 @@ import TheoriTransiton from "../gamePage/TheorieTransition/TheorieTransiton";
 import MainMenu from "../gamePage/MainMenu/MainMenu";
 import Credit from "../gamePage/Credit/Credit";
 import Settings from "../gamePage/Settings/Settings";
-import DataLoader from "./DataLoader";
+import LevelSelectPage from "../gamePage/LevelSelectPage/LevelSelectPage";
 
 const errorPage="MainMenu";             // page sur le quel renvoyer si il y a une erreur
 
@@ -31,12 +32,14 @@ export default class GamePageManager{
             "LevelPage":<LevelPage/>,
             "Level":<LevelTransiton/>,
             "Theorie":<TheoriTransiton/>,
-            "TheoriePage":<TheoriePage/>,
+            "LevelTheoriePage":<TheoriePage beforLevel={true}/>,
+            "TheoriePage":<TheoriePage beforLevel={false}/>,
             "MainMenu":<MainMenu/>,
             "Credit":<Credit/>,
-            "Settings":<Settings/>
+            "Settings":<Settings/>,
+            "LevelSelectPage":<LevelSelectPage/>
         }
-        this.exeptPage=["GameTitle","LevelPage","TheoriePage"];              // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
+        this.exeptPage=["GameTitle","LevelPage","TheoriePage","LevelTheoriePage"];              // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
     }
 
     /**
@@ -94,18 +97,45 @@ export default class GamePageManager{
 
     /**
      * laucneh a level + save the progresion
-     * @param {*} level 
+     * @param {*} level
+     * @param {*} transion si il y a une transiion avant l'affichage de la page
+     * @param {*} justThoerie si il la page de thoeire est afficher sans le level
      * @returns 
      */
-    static StartTheorie(theori,transion=true){
-        // check si la theori est accécible par le joueur, si non -> maine menu 
-        if(SaveManger.data.levelProgression<theori){
+    static StartLevelTheorie(level){
+        // check si le level est accécible par le joueur, si non -> maine menu 
+        if(SaveManger.data.levelProgression<level || level>DataLoader.getNumberOfLevel()){
             this.changePage(errorPage);
             return;
         }
-        sessionStorage.setItem("theorie",theori);
-        this.changePage((transion)?"Theorie":"TheoriePage");
+        let levelData=DataLoader.getLevelData(level);
+
+        // fin des levels disponible
+        if(levelData==null){
+            this.changePage("GameTitle");
+            return;
+        }
+
+        let hasTheorie=(levelData.hasStartTheorie);
+        sessionStorage.setItem("level",level);
+
+        sessionStorage.setItem("theorie",levelData.theorie);
+
+        this.changePage((hasTheorie)?"Theorie":"Level");
     }
+
+    /**
+     * laucneh a level + save the progresion
+     * @param {*} level
+     * @param {*} transion si il y a une transiion avant l'affichage de la page
+     * @param {*} justThoerie si il la page de thoeire est afficher sans le level
+     * @returns 
+     */
+        static StartTheoriePage(theori,fromLevel=true){
+            sessionStorage.setItem("theorie",theori);
+            if(!fromLevel)sessionStorage.removeItem("level");
+            this.changePage("TheoriePage");
+        }
     
 
     //#endregion

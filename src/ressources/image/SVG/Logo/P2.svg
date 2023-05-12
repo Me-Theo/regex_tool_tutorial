@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="P2.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 81.72178 49.137074"
+   height="49.137074mm"
+   width="81.721779mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="620"
+     inkscape:window-x="-9"
+     inkscape:window-height="1051"
+     inkscape:window-width="1759"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="107.85321"
+     inkscape:cx="98.857801"
+     inkscape:zoom="1.9354568"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-205.80519,-133.42802)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       id="text1807-8-6-0-3-6-3-4-7-4-3-0-7-3-2-2"
+       y="120.69061"
+       x="274.07092"
+       style="font-size:16.7226px;line-height:1.25;font-family:'Soup of Justice';-inkscape-font-specification:'Soup of Justice';fill:#4cfeb1;fill-opacity:1;stroke-width:0.906617;stroke-miterlimit:4;stroke-dasharray:none"
+       xml:space="preserve"
+       transform="rotate(8.7695622)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Om Botak';-inkscape-font-specification:'Om Botak';fill:#4cfeb1;fill-opacity:1;stroke-width:0.906617;stroke-miterlimit:4;stroke-dasharray:none"
+         y="120.69061"
+         x="274.07092"
+         id="tspan1805-8-8-8-8-5-17-9-3-0-1-3-1-2-0-4"
+         sodipodi:role="line">Tool</tspan></text>
+  </g>
+</svg>

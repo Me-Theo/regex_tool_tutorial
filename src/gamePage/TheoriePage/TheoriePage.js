@@ -12,7 +12,7 @@ import RegexSlideWord from '../../compenent/RegexSlideWord/RegexSlideWord';
 import LevelAnswer from '../../gameClass/LevelString';
 import DataLoader from '../../utils/DataLoader';
 
-export default function TheoriePage() {
+export default function TheoriePage(props) {
 
     const [title, setTitle]=useState(""); 
     const [text, setText]=useState(""); 
@@ -35,7 +35,26 @@ export default function TheoriePage() {
 
     return (
         <div className="GamePage TheoriePage">
-            <h1>{title}</h1>
+            <h1 className='PageTitle'>{title}</h1>
+            <div className='TheoriePart'>
+                <p>{text}</p>
+                <div className='Exemple'>
+                    <h1>Exemple</h1>
+                    <div style={{backgroundImage:"url("+imgsrc+")"}}></div>
+                </div>
+            </div>
+            <CustomButton title={(props.beforLevel)?"Next":"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>{
+                if(sessionStorage.getItem("level")==null){
+                    GamePageManager.changePage("MainMenu");
+                }else{
+                    if(props.beforLevel){
+                        GamePageManager.StartLevel(sessionStorage.getItem("level"));
+                    }
+                    else{
+                        GamePageManager.StartLevel(sessionStorage.getItem("level"),false);
+                    }
+                }
+            }}/>
         </div>
     );
 }
