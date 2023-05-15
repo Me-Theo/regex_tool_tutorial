@@ -1,12 +1,67 @@
 [
     {
         "name":"Basic",
-        "text":"Une regex est un motif de recherche qui permet de chercher des correspondances dans du texte en utilisant des règles de syntaxe spécifiques.",
-        "imagLink":"https://pbs.twimg.com/media/Fvd2v7RXoAA9A2i?format=jpg&name=4096x4096"
+        "text":"Une regex est un motif de recherche qui permet de chercher des correspondances dans du texte.",
+        "imagLink":"Basic.png"
     },
     {
-        "name":"notBasic",
-        "text":"Une regex est un motif de recherche qui permet de chercher des correspondances dans du texte en utilisant des règles de syntaxe spécifiques.",
-        "imagLink":"https://pbs.twimg.com/media/Fvd2v7RXoAA9A2i?format=jpg&name=4096x4096"
+        "name":"Ou \"|\"",
+        "text":"Dans une regex, l'opérateur \"|\" permet de spécifier plusieurs choix possibles pour un motif. Il permet de rechercher différentes alternatives et de trouver une correspondance si l'une des options est présente dans le texte.",
+        "imagLink":"Ou.png"
+    },
+    {
+        "name":"Ensemble de caractères",
+        "text":"Dans une regex, un ensemble de caractères permet de définir un groupe de caractères possibles à rechercher. Il offre une flexibilité en spécifiant qu'un caractère peut être choisi parmi une liste donnée, ce qui permet de cibler des motifs plus larges et variés.",
+        "imagLink":"Ensemble.png"
+    },
+    {
+        "name":"Rang de caractères",
+        "text":"Dans une regex, un range de caractères permet de définir un intervalle de caractères possibles à rechercher. Il permet de spécifier une plage de caractères en utilisant le premier et le dernier caractère, ce qui simplifie la recherche de motifs séquentiels.",
+        "imagLink":"Range.png"
+    },
+    {
+        "name":"Groupe",
+        "text":"Un groupe dans une regex permet de regrouper des éléments ensemble, afin de les traiter comme une seule entité lors de la recherche ou du remplacement de texte. Cela permet une gestion plus précise et structurée des motifs recherchés.",
+        "imagLink":"Group.png"
+    },
+    {
+        "name":"Comence par",
+        "text":"Dans une regex, le symbole \"^\" est utilisé pour ancrer la correspondance au début d'une ligne ou d'une chaîne de caractères. Il permet de rechercher des motifs qui commencent par un certain élément spécifié.",
+        "imagLink":"CommencePar.png"
+    },
+    {
+        "name":"Ne dois pas match",
+        "text":"Dans une regex, le symbole \"?!\" est utilisé pour représenter une assertion négative. Il permet de rechercher des motifs qui ne sont pas suivis d'un certain élément spécifié, donnant ainsi une condition d'exclusion lors de la recherche de correspondances.",
+        "imagLink":"NePas.png"
+    },
+    {
+        "name":"Zero ou Plus",
+        "text":"Dans une regex, le symbole \"*\" est un quantificateur qui signifie \"zéro ou plusieurs occurrences\" du caractère ou groupe précédent. Il permet de rechercher des motifs avec des éléments répétés de manière flexible, sans limite de nombre d'occurrences.",
+        "imagLink":"ZeroOuPlus.png"
+    },
+    {
+        "name":"Zero ou Un",
+        "text":"Dans une regex, le symbole \"?\" est un quantificateur qui signifie \"zéro ou une occurrence\" du caractère ou groupe précédent. Il permet de rechercher des motifs avec des éléments optionnels, c'est-à-dire qu'ils peuvent apparaître une fois ou ne pas apparaître du tout.",
+        "imagLink":"Optional.png"
+    },
+    {
+        "name":"Un ou Plus",
+        "text":"Dans une regex, le symbole \"+\" est un quantificateur qui signifie \"une ou plusieurs occurrences\" du caractère ou groupe précédent. Il permet de rechercher des motifs avec des éléments répétés au moins une fois, mais sans limite supérieure de nombre d'occurrences.",
+        "imagLink":"UnOuPlus.png"
+    },
+    {
+        "name":"Plage de répétition",
+        "text":"Dans une regex, le symbole \"{}\" est utilisé pour spécifier une plage précise de répétitions pour le caractère ou groupe précédent. Il permet de rechercher des motifs avec un nombre spécifique d'occurrences, en définissant une limite inférieure et/ou supérieure.",
+        "imagLink":"Plage.png"
+    },
+    {
+        "name":"\\s = espace",
+        "text":"Dans une regex, le symbole \"\\s\" représente un espace blanc. Il permet de rechercher des correspondances avec n'importe quel caractère d'espacement, comme un espace, une tabulation ou un saut de ligne.",
+        "imagLink":"Espace.png"
+    },
+    {
+        "name":"N'importe quel caractère",
+        "text":"Dans une regex, le symbole \".\" représente n'importe quel caractère. Il permet de rechercher une correspondance avec n'importe quel caractère, à l'exception des caractères de saut de ligne, en fonction du mode de recherche utilisé.",
+        "imagLink":"AnyThings.png"
     }
 ]

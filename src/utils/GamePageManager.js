@@ -10,13 +10,13 @@ import DataLoader from "./DataLoader";
 import GameTitle from "../gamePage/GameTitle/GameTitle";
 import TestPage from "../gamePage/TestPage/TestPage";
 import LevelPage from "../gamePage/LevelPage/LevelPage";
-import LevelTransiton from "../gamePage/LevelTransition/LevelTransiton";
 import TheoriePage from "../gamePage/TheoriePage/TheoriePage";
-import TheoriTransiton from "../gamePage/TheorieTransition/TheorieTransiton";
 import MainMenu from "../gamePage/MainMenu/MainMenu";
 import Credit from "../gamePage/Credit/Credit";
 import Settings from "../gamePage/Settings/Settings";
 import LevelSelectPage from "../gamePage/LevelSelectPage/LevelSelectPage";
+import Transiton from "../gamePage/Transition/Transiton";
+import ThoerieList from "../gamePage/TheorieList/ThoerieList";
 
 const errorPage="MainMenu";             // page sur le quel renvoyer si il y a une erreur
 
@@ -30,14 +30,15 @@ export default class GamePageManager{
             "GameTitle":<GameTitle/>,
             "TestPage":<TestPage/>,
             "LevelPage":<LevelPage/>,
-            "Level":<LevelTransiton/>,
-            "Theorie":<TheoriTransiton/>,
+            "Level":<Transiton nextPage={"LevelPage"}/>,
+            "Theorie":<Transiton nextPage={"LevelTheoriePage"} title={"Theorie"}/>,
             "LevelTheoriePage":<TheoriePage beforLevel={true}/>,
             "TheoriePage":<TheoriePage beforLevel={false}/>,
             "MainMenu":<MainMenu/>,
             "Credit":<Credit/>,
             "Settings":<Settings/>,
-            "LevelSelectPage":<LevelSelectPage/>
+            "LevelSelectPage":<LevelSelectPage/>,
+            "ThoerieList":<ThoerieList/>
         }
         this.exeptPage=["GameTitle","LevelPage","TheoriePage","LevelTheoriePage"];              // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
     }
@@ -126,9 +127,8 @@ export default class GamePageManager{
 
     /**
      * laucneh a level + save the progresion
-     * @param {*} level
-     * @param {*} transion si il y a une transiion avant l'affichage de la page
-     * @param {*} justThoerie si il la page de thoeire est afficher sans le level
+     * @param {*} theori
+     * @param {*} fromLevel si la theroei vine d'un level
      * @returns 
      */
         static StartTheoriePage(theori,fromLevel=true){

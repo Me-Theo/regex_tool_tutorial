@@ -1,0 +1,65 @@
+.ThoerieList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .ThoerieList .ThoerieBntContainer{
+        width: 70%;
+        height: 60%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+        .ThoerieList .ThoerieBntContainer .ThoerieSelectBnt{
+            --size:calc((100% / 5) - 60px);
+
+            width: max(70px,var(--size));
+            height: 110px;
+
+            border: solid var(--color-prime2) 5px;
+            border-radius: 20px;
+
+            font-size: 1.5vw;
+            font-family: Om_Botak;
+            color: var(--color-prime2);;
+
+            background-color: var(--color-background);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 30px;
+        }
+
+        .ThoerieList .ThoerieBntContainer .ThoerieSelectBnt:enabled:hover{
+            cursor: pointer;
+            animation: 0.25s ThoerieSelectBntHover_anim ease-in-out;
+            transform: scale(1.2);
+        }
+        @keyframes ThoerieSelectBntHover_anim {
+            0%{
+                transform: scale(1);
+            }
+            25%{
+                transform: scale(1.2) rotate(-10deg);
+            }
+            50%{
+                transform: scale(1.2) rotate(5deg);
+            }
+            75%{
+                transform: scale(1.2) rotate(-2.5deg);
+            }
+            100%{
+                transform: scale(1.2);
+            }
+        }
+
+
+        .ThoerieList .ThoerieBntContainer .ThoerieSelectBnt:disabled{
+            opacity: 0.5;
+        }

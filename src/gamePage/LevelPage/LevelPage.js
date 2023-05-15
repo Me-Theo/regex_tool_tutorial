@@ -247,7 +247,7 @@ export default function LevelPage(props) {
     */
     playerInputWidthCal.current.innerHTML=value.replaceAll(" ","&nbsp");;
     let width=playerInputWidthCal.current.offsetWidth;
-    playerInputText.current.style.width=width+"px";
+    playerInputText.current.style.width=(width+2)+"px";
   }
 
   //#endregion

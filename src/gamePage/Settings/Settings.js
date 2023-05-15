@@ -56,7 +56,7 @@ export default function Settings() {
 
     useEffect(()=>{
         // recupère les palettes et les affiche
-        let pals=DataLoader.getAllData();
+        let pals=DataLoader.getAllPaletteData();
         let palShowerList=[];
         let progres=SaveManger.data.levelProgression;
 

@@ -55,6 +55,10 @@ export default class DataLoader{
         return theorieData[theorieIndex];
     }
 
+    static getAllTheorieData(){
+        return theorieData;
+    }
+
     static getNumberOfLevel(){
         return theorieData.length;
     }
@@ -72,7 +76,7 @@ export default class DataLoader{
         return paletteData.length;
     }
 
-    static getAllData(){
+    static getAllPaletteData(){
         return paletteData;
     }
 }

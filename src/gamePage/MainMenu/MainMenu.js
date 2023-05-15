@@ -26,7 +26,7 @@ export default function MainMenu() {
                         <CustomButton title={"Settings"} fontSize={40} onClick={()=>{GamePageManager.changePage("Settings")}}/>
                     </div>
                     <div className='MenuBnt'>
-                        <CustomButton title={"Theories"} fontSize={40} onClick={()=>{GamePageManager.StartLevelTheorie(0)}}/>
+                        <CustomButton title={"Theories"} fontSize={40} onClick={()=>{GamePageManager.changePage("ThoerieList")}}/>
                     </div>
                     <div className='MenuBnt'>
                         <CustomButton title={"Credit"} fontSize={40} onClick={()=>{GamePageManager.changePage("Credit")}}/>

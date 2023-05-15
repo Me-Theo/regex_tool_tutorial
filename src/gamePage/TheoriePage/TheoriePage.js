@@ -12,11 +12,13 @@ import RegexSlideWord from '../../compenent/RegexSlideWord/RegexSlideWord';
 import LevelAnswer from '../../gameClass/LevelString';
 import DataLoader from '../../utils/DataLoader';
 
+
 export default function TheoriePage(props) {
 
     const [title, setTitle]=useState(""); 
     const [text, setText]=useState(""); 
     const [imgsrc, setImgsrc]=useState(""); 
+    const imgShowerRef=useRef(null);
 
     useEffect(()=>{
 
@@ -27,9 +29,23 @@ export default function TheoriePage(props) {
         }
 
         let data = DataLoader.getTheorieData(sessionStorage.getItem("theorie"));
+
+
+        /** load l'image */
+        const fetchImage = async () => {
+            try {
+                const response = await import(`../../ressources/image/TutoImag/${data.imagLink}`) // change relative path to suit your needs
+                setImgsrc(response.default);
+                console.log("JDkasjkd");
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        fetchImage();
+
+        // set le reste de la theorie
         setTitle(data.name);
         setText(data.text);
-        setImgsrc(data.imagLink);
     },[])
 
 
@@ -40,12 +56,12 @@ export default function TheoriePage(props) {
                 <p>{text}</p>
                 <div className='Exemple'>
                     <h1>Exemple</h1>
-                    <div style={{backgroundImage:"url("+imgsrc+")"}}></div>
+                    <div ref={imgShowerRef}><img src={imgsrc}></img></div>
                 </div>
             </div>
             <CustomButton title={(props.beforLevel)?"Next":"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>{
                 if(sessionStorage.getItem("level")==null){
-                    GamePageManager.changePage("MainMenu");
+                    GamePageManager.changePage("ThoerieList");
                 }else{
                     if(props.beforLevel){
                         GamePageManager.StartLevel(sessionStorage.getItem("level"));

@@ -4,11 +4,11 @@
         "theorieIndex":0,
         "words":[
             {
-                "text":"Word",
+                "text":"Hello",
                 "targetState":true
             }
         ],
-        "placeHolder":"",
+        "placeHolder":"Reg",
         "limit":-1
     },
     {
