@@ -30,13 +30,17 @@ export default function TheoriePage(props) {
 
         let data = DataLoader.getTheorieData(sessionStorage.getItem("theorie"));
 
+        // si la théorie n'existe pas
+        if(data==null){
+            GamePageManager.changePage("MainMenu");
+            return;
+        }
 
         /** load l'image */
         const fetchImage = async () => {
             try {
                 const response = await import(`../../ressources/image/TutoImag/${data.imagLink}`) // change relative path to suit your needs
-                setImgsrc(response.default);
-                console.log("JDkasjkd");
+                setImgsrc(response.default);;
             } catch (err) {
                 console.log(err);
             }

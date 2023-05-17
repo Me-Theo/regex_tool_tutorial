@@ -21,8 +21,8 @@ class GameContainer extends React.Component {
     this.container=React.createRef();
 
     // charge la denière page visiter (sessions), si pas -> Game title
-    let lastLevel=sessionStorage.getItem("lastPage");
-    let startPage=this.gamePageManager.getPage((lastLevel!=null)?lastLevel:"GameTitle");
+    let lastPage=sessionStorage.getItem("lastPage");
+    let startPage=this.gamePageManager.getPage((lastPage!=null)?lastPage:"GameTitle");
 
     // load la savgarde
     SaveManger.load();

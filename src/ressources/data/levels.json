@@ -13,6 +13,22 @@
     },
     {
         "startTheorie":false,
+        "theorieIndex":0,
+        "words":[
+            {
+                "text":"Bateau",
+                "targetState":true
+            },            
+            {
+                "text":"Canard",
+                "targetState":false
+            }
+        ],
+        "placeHolder":"",
+        "limit":-1
+    },
+    {
+        "startTheorie":false,
         "theorieIndex":1,
         "words":[
             {

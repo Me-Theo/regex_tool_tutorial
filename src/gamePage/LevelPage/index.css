@@ -107,6 +107,17 @@
             transform: scale(1.2);
         }
     }
+
+
+
+    .LevelPage .Ui .ShowTutoBnt{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+        -webkit-mask-image: url("../../ressources/image/SVG/TutoBnt.svg");
+    }
 /*#endregion */
 
 
@@ -358,6 +369,125 @@
 
 /*#endregion */
 
+/*#region Tuto*/
+.LevelPage .Tuto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 0.25s TutoStart_anim ease-in-out;
+}
+
+    @keyframes TutoStart_anim {
+        0%{
+            background-color:rgba(0, 0, 0, 0);
+        }
+        100%{
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .LevelPage .TutoEnd{
+        animation: 0.25s TutoEnd_anim ease-in-out;
+    }
+
+    
+    @keyframes TutoEnd_anim {
+        100%{
+            background-color:rgba(0, 0, 0, 0);
+        }
+        0%{
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .LevelPage .Tuto .Window{
+        width: 40%;
+        border-radius: 30px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: var(--color-prime2);
+        color: var(--color-prime2);
+        background-color: var(--color-background2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        animation: 0.25s pop ease-in-out;
+    }
+
+        .LevelPage .Tuto .Window p{
+            width: 70%;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .LevelPage .Tuto .Window .Green{
+            color: var(--color-right-lighted);
+
+            --outlineColor:var(--color-prime2);
+            --strokeSize:1px;
+
+            text-shadow: calc(-1 * var(--strokeSize)) calc(-1 * var(--strokeSize)) 0 var(--outlineColor), 
+            var(--strokeSize) calc(-1 * var(--strokeSize)) 0 var(--outlineColor), 
+            calc(-1 * var(--strokeSize)) var(--strokeSize) 0 var(--outlineColor), 
+            var(--strokeSize) var(--strokeSize) 0 var(--outlineColor);
+
+            font-size: 20px;
+        }
+
+        .LevelPage .Tuto .Window .Red{
+            color: var(--color-false-lighted);
+            
+            --outlineColor:var(--color-prime2);
+            --strokeSize:1px;
+
+            text-shadow: calc(-1 * var(--strokeSize)) calc(-1 * var(--strokeSize)) 0 var(--outlineColor), 
+            var(--strokeSize) calc(-1 * var(--strokeSize)) 0 var(--outlineColor), 
+            calc(-1 * var(--strokeSize)) var(--strokeSize) 0 var(--outlineColor), 
+            var(--strokeSize) var(--strokeSize) 0 var(--outlineColor);
+
+            font-size: 20px;
+        }
+        .LevelPage .Tuto .Window h1{
+            font-size: 35px;
+        }
+
+        .LevelPage .Tuto .Window .TutoGif{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('../../ressources/image/Tuto.gif');
+            background-size: contain;
+            margin-top: 10px;
+            width: 70%;
+            min-height: 200px;
+        }
+
+        .LevelPage .TutoEnd .Window{
+            animation: 0.25s WindowEnd_anim ease-in-out;
+        }
+
+        @keyframes WindowEnd_anim {
+            100%{
+                transform: scale(0);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+            0%{
+                transform: scale(1);
+            }
+          }
+
+
+
+/*#endregion */
 @media only screen and (min-width: 1500px) {
     .LevelPage .LevelFinishMessage{
         font-size: 150px;

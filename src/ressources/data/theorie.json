@@ -20,6 +20,11 @@
         "imagLink":"Range.png"
     },
     {
+        "name":"Pas dans la range",
+        "text":"Dans une range dans une regex, le caractère \"^\" utilisé au début de la range a une signification spéciale. Il indique une négation, ce qui signifie que la range correspond à tout caractère qui n'est pas inclus dans la liste spécifiée.",
+        "imagLink":"NoDansLaRange.png"
+    },
+    {
         "name":"Groupe",
         "text":"Un groupe dans une regex permet de regrouper des éléments ensemble, afin de les traiter comme une seule entité lors de la recherche ou du remplacement de texte. Cela permet une gestion plus précise et structurée des motifs recherchés.",
         "imagLink":"Group.png"
@@ -63,5 +68,15 @@
         "name":"N'importe quel caractère",
         "text":"Dans une regex, le symbole \".\" représente n'importe quel caractère. Il permet de rechercher une correspondance avec n'importe quel caractère, à l'exception des caractères de saut de ligne, en fonction du mode de recherche utilisé.",
         "imagLink":"AnyThings.png"
+    },
+    {
+        "name":"Range spéciale",
+        "text":"Il existe des ranges de caractère spécial qui n'ont pas vraiment de nom, comme \"\\w\" qui correspond à un caractère alphanumérique (lettre, chiffre ou souligné) ou \"\\d\" qui correspond à un chiffre de 0 à 9.",
+        "imagLink":"NoNameConcepte.png"
+    },
+    {
+        "name":"Bonus",
+        "text":"Bon, en bonus, voici un outil connu qui est super sympas : \"RegExr\". C'est un site web qui super pratique pour crée c'est regex, y a toute la théorie dessus + c'est simple à utiliser.",
+        "imagLink":"Bonus.png"
     }
 ]

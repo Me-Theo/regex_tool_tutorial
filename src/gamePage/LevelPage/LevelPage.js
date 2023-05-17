@@ -44,6 +44,10 @@ export default function LevelPage(props) {
   const [isLevelFinish,setIsLevelFinish]=useState(false);
   const [showLevelCompetMessage,setShowLevelCompetMessage]=useState(false);
   const [showNextLevelMessage,setShowNextLevelMessage]=useState(false);
+
+  // game tuto
+  const [showTuto,setShowTuto]=useState(false);
+  const tutoUi=useRef(null);
   
 
   // satrt set up
@@ -81,6 +85,12 @@ export default function LevelPage(props) {
 
     // focus le text input
     playerInputText.current.focus();
+
+    // si le joueur ne posède pas de progressions -> lancer le tuto
+    if(SaveManger.data.levelProgression==0)setTimeout(()=>{
+      setShowTuto(true);
+    },500);
+
 
   },[])
 
@@ -135,17 +145,6 @@ export default function LevelPage(props) {
 
       setTimeout(()=>{
         setShowNextLevelMessage(true);
-        
-        /*
-        // losque le niveau est fini, permette de pass au nievau suivant en apuiant sur la bar espace
-        let onPressSpaceBar=(e)=>{
-          if(e.code=="Space"){
-            GamePageManager.changePage("Title");
-            document.body.removeEventListener("keypress",onPressSpaceBar);
-          }
-        }
-        document.body.addEventListener('keypress', onPressSpaceBar);
-        */
       },500);
     }
   }
@@ -256,6 +255,29 @@ export default function LevelPage(props) {
   return (
     <div className="GamePage LevelPage">
         <div className='Ui'>
+          {
+            showTuto?
+            <div className='Tuto' ref={tutoUi}>
+              <div className='Window'>
+                <h1>Comment jouer ?</h1>
+                <div className='TutoGif'></div>
+                <p>Ecrivez une regex qui valide les mots en <spasn className="Green">vert</spasn> et invalide les mots en <spasn className="Red">rouge</spasn> pour compléter le niveau</p>
+                <CustomButton title={"Ok"} fontSize={40} onClick={()=>{
+                  // emèche de cliquer 2 fois sur le buttons
+                  if(tutoUi.current.className.includes("TutoEnd"))return;
+
+                  tutoUi.current.className+=" TutoEnd";
+                  void tutoUi.current.offsetWidth;
+
+                  // appler a la fin de l'animation
+                  setTimeout(()=>{
+                    setShowTuto(false);
+                  },240);
+                }}/>
+              </div>
+            </div>
+            :null
+          }
           <button className='ThoerieBnt' onClick={()=>{GamePageManager.StartTheoriePage(sessionStorage.getItem("theorie"),true);}}>
             <div className='Icon'>
               <TheoireIcon/>
@@ -265,7 +287,10 @@ export default function LevelPage(props) {
           <button className='HomeBnt SvgContainer' onClick={()=>{
             GamePageManager.changePage("MainMenu");
           }}>
-
+          </button>
+          <button className='HomeBnt ShowTutoBnt SvgContainer' onClick={()=>{
+            if(!showLevelCompetMessage)setShowTuto(true);
+          }}>
           </button>
         </div>
         <div className='RegexContainer' ref={regexSliderContainer}>

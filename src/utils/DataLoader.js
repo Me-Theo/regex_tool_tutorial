@@ -20,7 +20,6 @@ export default class DataLoader{
      * @returns {JSON} level Data
      */
     static getLevelData(levelNumber){
-
         let n = Number.parseInt(levelNumber);
         if(Number.isNaN(n))return null;
 
@@ -57,10 +56,6 @@ export default class DataLoader{
 
     static getAllTheorieData(){
         return theorieData;
-    }
-
-    static getNumberOfLevel(){
-        return theorieData.length;
     }
 
     /**

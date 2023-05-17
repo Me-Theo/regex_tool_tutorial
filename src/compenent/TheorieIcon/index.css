@@ -29,7 +29,7 @@
     }
 
     .TheoireIcon .Book2{
-        background-color: var(--color-prime1);
+        background-color: #d3d3d3ff;
         -webkit-mask-image: url("../../ressources/image/SVG/TheorieIcon/P3.svg");
     }
 

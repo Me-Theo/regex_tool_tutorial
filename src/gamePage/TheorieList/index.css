@@ -6,16 +6,16 @@
 }
 
     .ThoerieList .ThoerieBntContainer{
-        width: 70%;
+        width: 90%;
         height: 60%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        align-items: center;
+        justify-content: center;
     }
 
         .ThoerieList .ThoerieBntContainer .ThoerieSelectBnt{
-            --size:calc((100% / 5) - 60px);
+            --size:calc((100% / 6) - 60px);
 
             width: max(70px,var(--size));
             height: 110px;
@@ -33,7 +33,7 @@
             align-items: center;
             justify-content: center;
 
-            margin: 30px;
+            margin: 15px;
         }
 
         .ThoerieList .ThoerieBntContainer .ThoerieSelectBnt:enabled:hover{

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="TutoBnt.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 15.06949 21.209238"
+   height="21.209238mm"
+   width="15.06949mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="620"
+     inkscape:window-x="-9"
+     inkscape:window-height="1051"
+     inkscape:window-width="1759"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="55.590198"
+     inkscape:cx="9.1259345"
+     inkscape:zoom="2.7371493"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-42.633519,48.319742)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       xml:space="preserve"
+       style="font-size:22.9957px;line-height:1.25;font-family:'Soup of Justice';-inkscape-font-specification:'Soup of Justice';fill:#020001;fill-opacity:1;stroke-width:0.574893"
+       x="50.089073"
+       y="-28.214792"
+       id="text1332-8-4-1-0-8-6-7-7-5-6-2"><tspan
+         x="50.089073"
+         y="-28.214792"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Om Botak';-inkscape-font-specification:'Om Botak';text-align:center;text-anchor:middle;fill:#020001;fill-opacity:1;stroke:none;stroke-width:0.574893;stroke-opacity:1"
+         sodipodi:role="line"
+         id="tspan3526-3-8-2-9-6-9">?</tspan></text>
+  </g>
+</svg>
