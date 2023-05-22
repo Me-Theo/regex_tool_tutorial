@@ -72,7 +72,7 @@
         border-bottom:solid var(--color-prime2) 5px;
     }
         .MainMenu .PalSelectorContainer>div{
-            width: 50%;
+            width: 70%;
         }
 
         .MainMenu .PalSelectorContainer .CloseBnt{
