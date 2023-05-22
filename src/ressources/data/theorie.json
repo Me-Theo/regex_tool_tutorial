@@ -1,6 +1,6 @@
 [
     {
-        "name":"Basic",
+        "name":"Bases",
         "text":"Une regex est un motif de recherche qui permet de chercher des correspondances dans du texte.",
         "imagLink":"Basic.png"
     },
@@ -15,7 +15,7 @@
         "imagLink":"Ensemble.png"
     },
     {
-        "name":"Rang de caractères",
+        "name":"Range de caractères",
         "text":"Dans une regex, un range de caractères permet de définir un intervalle de caractères possibles à rechercher. Il permet de spécifier une plage de caractères en utilisant le premier et le dernier caractère, ce qui simplifie la recherche de motifs séquentiels.",
         "imagLink":"Range.png"
     },
@@ -30,7 +30,7 @@
         "imagLink":"Group.png"
     },
     {
-        "name":"Comence par",
+        "name":"Commence par",
         "text":"Dans une regex, le symbole \"^\" est utilisé pour ancrer la correspondance au début d'une ligne ou d'une chaîne de caractères. Il permet de rechercher des motifs qui commencent par un certain élément spécifié.",
         "imagLink":"CommencePar.png"
     },
@@ -40,12 +40,12 @@
         "imagLink":"NePas.png"
     },
     {
-        "name":"Zero ou Plus",
+        "name":"Zéro ou Plus",
         "text":"Dans une regex, le symbole \"*\" est un quantificateur qui signifie \"zéro ou plusieurs occurrences\" du caractère ou groupe précédent. Il permet de rechercher des motifs avec des éléments répétés de manière flexible, sans limite de nombre d'occurrences.",
         "imagLink":"ZeroOuPlus.png"
     },
     {
-        "name":"Zero ou Un",
+        "name":"Zéro ou Un",
         "text":"Dans une regex, le symbole \"?\" est un quantificateur qui signifie \"zéro ou une occurrence\" du caractère ou groupe précédent. Il permet de rechercher des motifs avec des éléments optionnels, c'est-à-dire qu'ils peuvent apparaître une fois ou ne pas apparaître du tout.",
         "imagLink":"Optional.png"
     },

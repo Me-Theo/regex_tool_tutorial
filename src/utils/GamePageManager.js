@@ -31,14 +31,15 @@ export default class GamePageManager{
             "TestPage":<TestPage/>,
             "LevelPage":<LevelPage/>,
             "Level":<Transiton nextPage={"LevelPage"}/>,
-            "Theorie":<Transiton nextPage={"LevelTheoriePage"} title={"Theorie"}/>,
+            "Theorie":<Transiton nextPage={"LevelTheoriePage"} title={"Théorie"}/>,
             "LevelTheoriePage":<TheoriePage beforLevel={true}/>,
             "TheoriePage":<TheoriePage beforLevel={false}/>,
             "MainMenu":<MainMenu/>,
             "Credit":<Credit/>,
             "Settings":<Settings/>,
             "LevelSelectPage":<LevelSelectPage/>,
-            "ThoerieList":<ThoerieList/>
+            "ThoerieList":<ThoerieList/>,
+            "EndScreen":<Transiton nextPage={"MainMenu"} title={"Thx for playing :)"} time={1500}/>
         }
         this.exeptPage=["GameTitle","LevelPage","TheoriePage","LevelTheoriePage"];              // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
     }
@@ -111,6 +112,14 @@ export default class GamePageManager{
         }
         let levelData=DataLoader.getLevelData(level);
 
+        // edn screen
+        if(level>=DataLoader.getNumberOfLevel()){
+            this.changePage("EndScreen");
+            console.log("Ahahah");
+            return;
+        }
+
+
         // fin des levels disponible
         if(levelData==null){
             this.changePage("GameTitle");
@@ -121,7 +130,6 @@ export default class GamePageManager{
         sessionStorage.setItem("level",level);
 
         sessionStorage.setItem("theorie",levelData.theorie);
-
         this.changePage((hasTheorie)?"Theorie":"Level");
     }
 

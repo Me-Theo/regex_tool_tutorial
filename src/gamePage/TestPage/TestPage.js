@@ -23,12 +23,12 @@ export default function TestPage() {
     <div className="GamePage TestPage">
         <h1>Testpage</h1>
         <div className="testZone">
-          <CustomButton title={"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
+          <CustomButton title={"Retour"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
         </div>
         <div className='testregexShower'>
           <RegexSlideWord levelAnswer={a.current} />
         </div>
-        <CustomButton title={"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
+        <CustomButton title={"Retour"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
         <div></div>
     </div>
   );

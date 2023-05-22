@@ -24,6 +24,39 @@
         }
     }
 
+        .LevelPage .Ui .LevelName{
+            position: absolute;
+            left: 25%;
+            top:2vw;
+            font-size: 3vw;
+            animation: 0.5s LevelName_anim ease-in-out;
+            text-align: center;
+            width: 50%;
+            margin: 0;
+            opacity: 1;
+            transition: 0.1s opacity;
+        }
+        @keyframes LevelName_anim {
+            0%{
+                top:-100%;
+                transform: scale(0.8,1.2);
+            }
+            59%{
+                top:2vw;
+                transform: scale(0.8,1.2);
+            }
+            60%{
+                transform: scale(1.2,0.8);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        .LevelPage .Ui .LevelName_hide{
+            opacity: 0;
+        }
+
         .LevelPage .Ui .ThoerieBnt{
             position: absolute;
             top: 25px;
@@ -152,7 +185,7 @@
     .LevelPage .inputHolder{
         z-index: 1;
         --fontSize:20px;
-        width: 20%;
+        width: 35%;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -38,11 +38,11 @@ export default function ThoerieList() {
     },[]);
     return (
         <div className="GamePage ThoerieList">
-            <h1 className='PageTitle'>Theorie List</h1>
+            <h1 className='PageTitle'>Théories</h1>
             <div className="ThoerieBntContainer">
                 {thoerieSelectBnt}
             </div>
-            <CustomButton title={"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
+            <CustomButton title={"Retour"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
         </div>
     );
 }

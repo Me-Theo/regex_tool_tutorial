@@ -24,6 +24,11 @@ html, body, #root {
   padding: 0;
   font-family: Om_Botak;
   color: var(--color-prime2);
+
+  /*Hide scroll bar*/
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-x: hidden;
 }
 
 code {

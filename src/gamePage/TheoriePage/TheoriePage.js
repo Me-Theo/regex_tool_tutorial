@@ -63,7 +63,7 @@ export default function TheoriePage(props) {
                     <div ref={imgShowerRef}><img src={imgsrc}></img></div>
                 </div>
             </div>
-            <CustomButton title={(props.beforLevel)?"Next":"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>{
+            <CustomButton title={(props.beforLevel)?"Suivant":"Retour"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>{
                 if(sessionStorage.getItem("level")==null){
                     GamePageManager.changePage("ThoerieList");
                 }else{

@@ -1,0 +1,106 @@
+
+.PaletteShowerContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+/*Color palet shower*/
+    .PaletteShowerContainer .PaletteShower{
+        --palBackgroundColor:#fff;
+        --palMainColor:#000;
+
+        font-family: Om_Botak;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        position: relative;
+        border-style: solid;
+        border-color: var(--color-prime2);
+        border-radius: 10px;
+        border-width: 3px;
+        transform: scale(1);
+
+        transition: 0.25s transform;
+    }
+
+        .PaletteShowerContainer .PaletteShower .LockLevel{
+            position: absolute;
+            left: 50%;
+            top: -50%;
+            transform: translate(-50%, -50%);
+            color: var(--color-prime2);
+            font-size: 25px;
+        }
+
+        .PaletteShowerContainer .PaletteShower .PaletteColorsContainer{
+            visibility: hidden;
+            display: flex;
+            width: 200px;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--palBackgroundColor);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            
+            /* Position the tooltip */
+            position: absolute;
+            top: 125%;
+            left: -87.5px;
+
+            border: var(--color-prime2) 5px solid;
+
+            color: var(--palMainColor);
+
+            font-size: 25px;
+        }
+
+
+        .PaletteShowerContainer .PaletteShower .PaletteColorsContainer::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 105px;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent var(--color-prime2) transparent;
+        }
+
+            .PaletteShowerContainer .PaletteShower .PaletteColorsContainer .PaletteColors{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+        
+        .PaletteShowerContainer .PaletteShower .ColorShower{
+            min-width: 30px;
+            min-height: 30px;
+            margin: 5px;
+            border-style: solid;
+            border-color: var(--palMainColor);
+            border-radius: 10px;
+        }
+
+        .PaletteShowerContainer .PaletteShower:enabled:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+            .PaletteShowerContainer .PaletteShower:enabled:hover .PaletteColorsContainer{
+                visibility: visible;
+                animation:  0.25s pop;
+            }
+        
+            .PaletteShowerContainer .PaletteShower:disabled{
+                opacity: 0.5;
+            }

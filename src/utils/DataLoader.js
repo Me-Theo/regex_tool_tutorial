@@ -37,7 +37,8 @@ export default class DataLoader{
             placeHolder:data.placeHolder,
             limit:data.limit,
             theorie:data.theorieIndex,
-            hasStartTheorie:data.startTheorie
+            hasStartTheorie:data.startTheorie,
+            name:data.name
         }
     }
 

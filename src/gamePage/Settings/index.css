@@ -4,17 +4,11 @@
 
     .Settings .ProgressionTab{
         width: 50%;
+        height: 60%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-        .Settings .ProgressionTab .PaletteShowerContainer{
-            display: flex;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
 
     .Settings .DangerZone{
         background-color: #ff0055;
@@ -35,73 +29,3 @@
     }
 
 
-/*Color palet shower*/
-    .Settings .PaletteShower{
-        font-family: Om_Botak;
-        font-size: 30px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        position: relative;
-        border-style: solid;
-        border-color: var(--color-prime2);
-        border-radius: 10px;
-        border-width: 3px;
-        transform: scale(1);
-        cursor: pointer;
-
-        transition: 0.25s transform;
-    }
-
-        .Settings .PaletteShower .PaletteColorsContainer{
-            visibility: hidden;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            width: 200px;
-            background-color: var(--color-prime1);
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            
-            /* Position the tooltip */
-            position: absolute;
-            top: 125%;
-            left: 50%;
-            margin-left: -100px;
-        }
-
-        .Settings .PaletteShower .PaletteColorsContainer::after {
-            content: "";
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: transparent transparent var(--color-prime1) transparent;
-        }
-        
-        .Settings .PaletteShower .ColorShower{
-            min-width: 30px;
-            min-height: 30px;
-            margin: 5px;
-            border-style: solid;
-            border-radius: 10px;
-        }
-
-        .Settings .PaletteShower:enabled:hover{
-            transform: scale(1.2);
-        }
-            .Settings .PaletteShower:enabled:hover .PaletteColorsContainer{
-                visibility: visible;
-                animation:  0.25s pop;
-            }
-        
-            .Settings .PaletteShower:disabled{
-                opacity: 0.5;
-            }

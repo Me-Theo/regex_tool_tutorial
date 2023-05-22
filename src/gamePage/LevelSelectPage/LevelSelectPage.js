@@ -15,15 +15,8 @@ import DataLoader from "../../utils/DataLoader";
 
 function LevelSelectBnt(props) {
 
-    const [isUnlock,setIsUnlock]=useState(false);
-
-    useEffect(()=>{
-        setIsUnlock(SaveManger.data.levelProgression<props.level);
-    },[])
-
-
     return (
-        <button className="LevelSelectBnt" onClick={()=>GamePageManager.StartLevelTheorie(props.level)} disabled={isUnlock}>
+        <button className="LevelSelectBnt" onClick={()=>GamePageManager.StartLevelTheorie(props.level)} disabled={SaveManger.data.levelProgression<props.level}>
             {props.level+1}
         </button>
     );
@@ -45,11 +38,23 @@ export default function LevelSelectPage() {
     const [hasNavBnt,setHasNavBnt]=useState(false);
 
     useEffect(()=>{
+
         let totLvl=DataLoader.getNumberOfLevel();
         totalLevel.current=totLvl;
-        totalPages.current=(totLvl+(nLevelParPage-(totLvl%nLevelParPage)))/nLevelParPage;
+        let n = (totLvl%nLevelParPage);
+        totalPages.current=(totLvl+((n>0)?nLevelParPage:0))/nLevelParPage;
         setHasNavBnt(totLvl>nLevelParPage);
-        GenSelectBnt(0);
+
+        let page=0;
+        // si le joueur était rentré dans un level avant
+        if(sessionStorage.getItem("level")!=null){
+            let n=sessionStorage.getItem("level");
+            page=((n-(n%nLevelParPage))/nLevelParPage);
+            setActualPage(page);
+        }
+        
+
+        GenSelectBnt(page);
     },[]);
 
     function GenSelectBnt(page){
@@ -98,7 +103,7 @@ export default function LevelSelectPage() {
 
     return (
         <div className="GamePage LevelSelectPage">
-            <h1 className='PageTitle'>Level Select</h1>
+            <h1 className='PageTitle'>Niveaux</h1>
             <div className="LevelSelectContainer" style={{justifyContent: (hasNavBnt)?"space-around":"center"}}>
                 {hasNavBnt?
                     <button className="NavBnt GoBack SvgContainer" disabled={actualPage<=0} onClick={(e)=>{
@@ -120,7 +125,7 @@ export default function LevelSelectPage() {
                     :null
                 }
             </div>
-            <CustomButton title={"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
+            <CustomButton title={"Retour"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
         </div>
     );
 }

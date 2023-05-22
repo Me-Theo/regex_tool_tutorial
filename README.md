@@ -6,27 +6,26 @@ pour ajouter un level, il sufie d'ajouter un antrée dans le fichier "level.json
 
 ```JSON
     {
-        "thorieIndex":0,
+        "startTheorie":true,
+        "theorieIndex":0,
+        "name":"",
         "words":[
             {
-                "text":"sdad",
-                "targetState":false
-            },
-            {
-                "text":"Tool",
+                "text":"Hello",
                 "targetState":true
             },
             {
-                "text":"asdas",
+                "text":"World",
                 "targetState":false
             }
         ],
-        "placeHolder":"haha",
-        "limit":4
-    }
-```
+        "placeHolder":"",
+        "limit":-1
+    },
 voicie de quoi il composer : 
+- startTheorie => si le niveau commence par une théorie ou non
 - thorieIndex => index de la thorie qui est relier au niveau, si pas de théorie = -1
+- name => nom du niveau, purment optionel et n'est utiliser que pour les niveau bonus
 - words => mots a valider ou non => 
 ```JSON
 {

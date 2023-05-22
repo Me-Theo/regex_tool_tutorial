@@ -1,51 +1,90 @@
 [
     {
-        "maine":"#311C17",
+        "name":"Main",
+        "main":"#311C17",
         "background":"#FEFBEA",
         "valide":"#4CFEB1",
         "invalide":"#FF4B81",
         "progressionUnlock":0
     },
     {
-        "maine":"#777E8C",
-        "background":"#FAFAFA",
-        "valide":"#4CFEB1",
-        "invalide":"#F16680",
-        "progressionUnlock":0
+        "name":"Lempadère",
+        "main":"#262626",
+        "background":"#FFFFFF",
+        "valide":"#00FF99",
+        "invalide":"#FF0055",
+        "progressionUnlock":4
     },
     {
-        "maine":"#1F2236",
-        "background":"#374465",
-        "valide":"#00ff99",
-        "invalide":"#ff0055",
-        "progressionUnlock":0
+        "name":"Celeste",
+        "main":"#3E2A60",
+        "background":"#8CCCE4",
+        "valide":"#40FF61",
+        "invalide":"#FD246D",
+        "progressionUnlock":8
     },
     {
-        "maine":"#172931",
-        "background":"#E2F6FF",
-        "valide":"#4CFEB1",
-        "invalide":"#FF4B81",
-        "progressionUnlock":0
+        "name":"Ice",
+        "main":"#0468BF",
+        "background":"#C8EFFF",
+        "valide":"#00B7FF",
+        "invalide":"#F23D5E",
+        "progressionUnlock":12
     },
     {
-        "maine":"#F96D31",
-        "background":"#FFAB41",
-        "valide":"#85FE4C",
-        "invalide":"#E03D8B",
-        "progressionUnlock":0
+        "name":"Journey",
+        "main":"#9D3B22",
+        "background":"#F7E6B2",
+        "valide":"#61CF72",
+        "invalide":"#C91309",
+        "progressionUnlock":16
     },
     {
-        "maine":"#FFAC42",
+        "name":"Lamb",
+        "main":"#45423D",
+        "background":"#FBE7C6",
+        "valide":"#B197BD",
+        "invalide":"#FF0000",
+        "progressionUnlock":20
+    },
+    {
+        "name":"Shar",
+        "main":"#FFAC42",
         "background":"#FEE699",
         "valide":"#85FE4C",
         "invalide":"#FF374F",
-        "progressionUnlock":0
+        "progressionUnlock":24
     },
     {
-        "maine":"#0075FF",
-        "background":"#ffffff",
-        "valide":"#00FF99",
-        "invalide":"#ff0055",
-        "progressionUnlock":0
+        "name":"Frog",
+        "main":"#4D6EFF",
+        "background":"#6FFFDC",
+        "valide":"#00FFAC",
+        "invalide":"#FC034C",
+        "progressionUnlock":28
+    },
+    {
+        "name":"Dice",
+        "main":"#2E2462",
+        "background":"#6969FB",
+        "valide":"#FFD33C",
+        "invalide":"#FD003B",
+        "progressionUnlock":32
+    },
+    {
+        "name":"Sky Island",
+        "main":"#0E5135",
+        "background":"#66D9D9",
+        "valide":"#4ABA91",
+        "invalide":"#D4CE46",
+        "progressionUnlock":34
+    },
+    {
+        "name":"Gear",
+        "main":"#570602",
+        "background":"#FBFBFB",
+        "valide":"#0A3E9B",
+        "invalide":"#961D20",
+        "progressionUnlock":40
     }
 ]

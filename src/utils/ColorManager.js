@@ -13,7 +13,7 @@ export default class ColorManager{
      */
     static setPallette(index){
         let pla=DataLoader.getPalette(index);
-        let plaFull=this.creatFullPalette(pla.maine,pla.background,pla.valide,pla.invalide);
+        let plaFull=this.creatFullPalette(pla.main,pla.background,pla.valide,pla.invalide);
         this.applyPalette(plaFull);
     }
 

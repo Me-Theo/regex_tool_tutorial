@@ -14,14 +14,14 @@ import SaveManger from "../../utils/SaveManager";
 export default function Transiton(props) {
 
     useEffect(()=>{
-        setTimeout(()=>GamePageManager.changePage(props.nextPage),750);
+        setTimeout(()=>GamePageManager.changePage(props.nextPage),(props.time==undefined)?750:props.time);
     },[]);
 
     return (
         <div className="GamePage GameTransition">
             <h1 className="NoSelect">{
                 (props.title==undefined || props.title==null)?(
-                    "Level "+(Number(sessionStorage.getItem("level"))+1)
+                    "Niveau "+(Number(sessionStorage.getItem("level"))+1)
                 ):props.title
             }</h1>
         </div>

@@ -48,6 +48,9 @@ export default function LevelPage(props) {
   // game tuto
   const [showTuto,setShowTuto]=useState(false);
   const tutoUi=useRef(null);
+
+  // ui
+  const [levelName,setLevelName]=useState("");
   
 
   // satrt set up
@@ -70,6 +73,20 @@ export default function LevelPage(props) {
     }
 
     levelString.current=d.strings;
+
+
+    //trouve le nom du niveau
+    // get theorie data
+    let th = DataLoader.getTheorieData(d.theorie);
+
+    // si le niveau est un bonus, alors afficher nom du niveau, si non => nom de la théroeir
+    if(th.name=="Bonus"){
+      setLevelName(`Niveau ${Number.parseInt(levelNumber.current)+1} : ${d.name}`);
+    }
+    else{
+      setLevelName(`Niveau ${Number.parseInt(levelNumber.current)+1} : ${th.name}`);
+    }
+
 
     // create level slider
     let sliderObjs=[];
@@ -278,6 +295,7 @@ export default function LevelPage(props) {
             </div>
             :null
           }
+          <h1 className={'LevelName NoSelect'+((isLevelFinish)?" LevelName_hide":"")}>{levelName}</h1>
           <button className='ThoerieBnt' onClick={()=>{GamePageManager.StartTheoriePage(sessionStorage.getItem("theorie"),true);}}>
             <div className='Icon'>
               <TheoireIcon/>
@@ -285,7 +303,7 @@ export default function LevelPage(props) {
             <label>Théorie</label>
           </button>
           <button className='HomeBnt SvgContainer' onClick={()=>{
-            GamePageManager.changePage("MainMenu");
+            GamePageManager.changePage("LevelSelectPage");
           }}>
           </button>
           <button className='HomeBnt ShowTutoBnt SvgContainer' onClick={()=>{
@@ -312,7 +330,7 @@ export default function LevelPage(props) {
           <span className='embedValue NoSelect'>{regexStartAndEnd[1]}</span>
           {
           showNextLevelMessage?<div className='NextLevelNotif'>
-              <CustomButton title={"Next"} fontSize={40} onClick={()=>{
+              <CustomButton title={"Suivant"} fontSize={40} onClick={()=>{
                 // go next level
                 GamePageManager.StartLevelTheorie(Number.parseInt(levelNumber.current)+1);
               }}/>

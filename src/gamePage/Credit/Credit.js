@@ -13,13 +13,13 @@ import GamePageManager from "../../utils/GamePageManager";
 export default function Credit() {
   return (
     <div className="GamePage Credit">
-        <h1 className="PageTitle">Credit</h1>
+        <h1 className="PageTitle">Crédits</h1>
         <div className="CreditMember">
-            <label className="Role">programmation - art - design</label>
+            <label className="Role">Programmation - Art - Design</label>
             <div className="Perso SvgContainer"></div>
             <a href={"https://twitter.com/_MeTheo"} target="_blank" className="Social"><div className="twitterLogo SvgContainer"></div>@_MeTheo</a>
         </div>
-        <CustomButton title={"Back"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
+        <CustomButton title={"Retour"} fontSize={40} addStyle={{marginTop:"auto",marginBottom:50}} onClick={()=>GamePageManager.changePage("MainMenu")}/>
     </div>
   );
 }
