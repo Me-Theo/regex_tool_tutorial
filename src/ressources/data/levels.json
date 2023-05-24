@@ -135,21 +135,30 @@
         "name":"",
         "words":[
             {
-                "text":"abc",
+                "text":"spam",
                 "targetState":true
             },
             {
-                "text":"bcd",
-                "targetState":true
-            },
-            {
-                "text":"cdf",
-                "targetState":true
-            },
-            {
-                "text":"fgh",
+                "text":"is",
                 "targetState":false
+            },
+            {
+                "text":"a",
+                "targetState":true
+            },
+            {
+                "text":"monty",
+                "targetState":false
+            },
+            {
+                "text":"python",
+                "targetState":true
+            },
+            {
+                "text":"sketch",
+                "targetState":true
             }
+
         ],
         "placeHolder":"",
         "limit":-1
@@ -197,7 +206,7 @@
                 "targetState":false
             },
             {
-                "text":"Cricle",
+                "text":"Circle",
                 "targetState":true
             }
         ],
@@ -210,19 +219,27 @@
         "name":"",
         "words":[
             {
-                "text":"1",
+                "text":"123",
                 "targetState":false
             },
             {
-                "text":"A",
+                "text":"Long Word",
                 "targetState":true
             },
             {
-                "text":"2",
+                "text":"321",
                 "targetState":false
             },
             {
-                "text":"B",
+                "text":"Realy Long Word",
+                "targetState":true
+            },
+            {
+                "text":"231",
+                "targetState":false
+            },
+            {
+                "text":"Letter z",
                 "targetState":true
             }
         ],
@@ -235,7 +252,7 @@
         "name":"",
         "words":[
             {
-                "text":"2",
+                "text":"2345",
                 "targetState":true
             },
             {
@@ -243,7 +260,7 @@
                 "targetState":false
             },
             {
-                "text":"2",
+                "text":"7691",
                 "targetState":true
             },
             {
@@ -251,7 +268,7 @@
                 "targetState":false
             },
             {
-                "text":"5",
+                "text":"10 036",
                 "targetState":true
             }
         ],
@@ -264,27 +281,27 @@
         "name":"",
         "words":[
             {
-                "text":"a",
+                "text":"qwertz",
                 "targetState":true
             },
             {
-                "text":"b",
+                "text":"cvb",
                 "targetState":true
             },
             {
-                "text":"c",
+                "text":"jkl",
                 "targetState":true
             },
             {
-                "text":"1",
+                "text":"0123",
                 "targetState":true
             },
             {
-                "text":"2",
+                "text":"6789",
                 "targetState":true
             },
             {
-                "text":"=",
+                "text":">:(",
                 "targetState":false
             }
         ],
@@ -326,11 +343,11 @@
                 "targetState":true
             },
             {
-                "text":"Better",
+                "text":"better",
                 "targetState":false
             },
             {
-                "text":"Then",
+                "text":"then",
                 "targetState":false
             },
             {
@@ -417,7 +434,7 @@
                 "targetState":true
             },
             {
-                "text":"un Lynel",
+                "text":"Big L",
                 "targetState":false
             }
         ],
@@ -430,20 +447,24 @@
         "name":"",
         "words":[
             {
-                "text":"limonade",
+                "text":"Cloud",
                 "targetState":true
             },
             {
-                "text":"lavande",
+                "text":"Computing",
                 "targetState":true
             },
             {
-                "text":"hello",
+                "text":"the",
                 "targetState":false
             },
             {
-                "text":"lituanie",
+                "text":"hors",
                 "targetState":true
+            },
+            {
+                "text":"asdfghjCt",
+                "targetState":false
             }
         ],
         "placeHolder":"",
@@ -480,7 +501,7 @@
                 "targetState":true
             },
             {
-                "text":"PhpFun",
+                "text":"PhpIsCool",
                 "targetState":false
             },
             {
@@ -509,7 +530,7 @@
                 "targetState":true
             },
             {
-                "text":"Cannard",
+                "text":"Cannnnnard",
                 "targetState":false
             }
         ],
@@ -522,19 +543,19 @@
         "name":"",
         "words":[
             {
-                "text":"-abc-",
+                "text":"-123abc-",
                 "targetState":false
             },
             {
-                "text":"-123123123-",
+                "text":"-7899789-",
                 "targetState":true
             },
             {
-                "text":"-34567-",
+                "text":"-1020120-",
                 "targetState":true
             },
             {
-                "text":"-231-",
+                "text":"-34563456-",
                 "targetState":true
             }
         ],
@@ -551,15 +572,15 @@
                 "targetState":true
             },
             {
-                "text":"catx",
+                "text":"caytx",
                 "targetState":false
             },
             {
-                "text":"cats",
+                "text":"cat",
                 "targetState":true
             },
             {
-                "text":"cat",
+                "text":"cayts",
                 "targetState":false
             }
         ],
@@ -580,7 +601,7 @@
                 "targetState":true
             },
             {
-                "text":"VXOL",
+                "text":"VXOLT",
                 "targetState":false
             }
         ],
@@ -601,11 +622,15 @@
                 "targetState":true
             },
             {
+                "text":"12------rd",
+                "targetState":false
+            },
+            {
                 "text":"pa----rd",
                 "targetState":true
             },
             {
-                "text":"p------2",
+                "text":"pa------dr",
                 "targetState":false
             }
         ],
@@ -618,7 +643,7 @@
         "name":"",
         "words":[
             {
-                "text":"n=2",
+                "text":"power=2",
                 "targetState":true
             },
             {
@@ -626,7 +651,7 @@
                 "targetState":false
             },
             {
-                "text":"lo==100",
+                "text":"speed==100",
                 "targetState":true
             },
             {
@@ -643,31 +668,6 @@
         "name":"",
         "words":[
             {
-                "text":"n=2",
-                "targetState":true
-            },
-            {
-                "text":"lo===100",
-                "targetState":true
-            },
-            {
-                "text":"jump==123",
-                "targetState":true
-            },
-            {
-                "text":"jump====123",
-                "targetState":false
-            }
-        ],
-        "placeHolder":"",
-        "limit":-1
-    },
-    {
-        "startTheorie":false,
-        "theorieIndex":11,
-        "name":"",
-        "words":[
-            {
                 "text":"ice",
                 "targetState":false
             },
@@ -678,6 +678,10 @@
             {
                 "text":"sandwich",
                 "targetState":true
+            },
+            {
+                "text":"az",
+                "targetState":false
             }
         ],
         "placeHolder":"",
@@ -702,6 +706,31 @@
             },
             {
                 "text":"ct",
+                "targetState":false
+            }
+        ],
+        "placeHolder":"",
+        "limit":-1
+    },
+    {
+        "startTheorie":false,
+        "theorieIndex":11,
+        "name":"",
+        "words":[
+            {
+                "text":"power=2",
+                "targetState":true
+            },
+            {
+                "text":"speed===100",
+                "targetState":true
+            },
+            {
+                "text":"speed==123",
+                "targetState":true
+            },
+            {
+                "text":"speed====123",
                 "targetState":false
             }
         ],
@@ -747,7 +776,7 @@
                 "targetState":true
             },
             {
-                "text":"goose Groove",
+                "text":"groove goose",
                 "targetState":false
             },
             {
@@ -764,15 +793,15 @@
         "name":"",
         "words":[
             {
-                "text":"asd123,.-",
+                "text":"asd123,. :]",
                 "targetState":true
             },
             {
-                "text":"78odl-é$à",
+                "text":"78odl-é$à :]",
                 "targetState":true
             },
             {
-                "text":"a213.",
+                "text":"a213$. >:[",
                 "targetState":false
             }
         ],
@@ -797,7 +826,7 @@
                 "targetState":true
             },
             {
-                "text":"Etml@vd.com",
+                "text":"chvdeasdea@ch.vd",
                 "targetState":false
             }
         ],
@@ -810,15 +839,15 @@
         "name":"",
         "words":[
             {
-                "text":"Regex",
+                "text":"-Word_0_Word_0_Word-",
                 "targetState":false
             },
             {
-                "text":"133",
+                "text":"-12345-",
                 "targetState":true
             },
             {
-                "text":"Tool",
+                "text":"-Simple_0_Word-",
                 "targetState":false
             }
         ],
@@ -835,11 +864,11 @@
                 "targetState":true
             },
             {
-                "text":".regex",
+                "text":"re3...-g--...ex",
                 "targetState":false
             },
             {
-                "text":"R3G3X",
+                "text":"r3G3x",
                 "targetState":true
             }
         ],

@@ -54,7 +54,7 @@ export default class SaveManger{
         let now=new Date();
         now.setFullYear(now.getFullYear()+2);
         let d = JSON.stringify(SaveManger.data);
-        document.cookie="save="+d+"; expires="+now.toUTCString()+"; path=/";
+        document.cookie="save="+d+"; expires="+now.toUTCString()+"; path=/ ; SameSite=None; Secure";
     }
 
     static reste(){

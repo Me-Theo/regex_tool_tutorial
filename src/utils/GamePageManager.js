@@ -41,7 +41,9 @@ export default class GamePageManager{
             "ThoerieList":<ThoerieList/>,
             "EndScreen":<Transiton nextPage={"MainMenu"} title={"Thx for playing :)"} time={1500}/>
         }
-        this.exeptPage=["GameTitle","LevelPage","TheoriePage","LevelTheoriePage"];              // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
+        
+        // liste des page qui ne peux être sauvgarder et donc, ne peux pas être atteinte autrement qu'en jeu
+        this.exeptPage=["GameTitle","LevelPage","TheoriePage","LevelTheoriePage"];
     }
 
     /**

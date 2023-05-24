@@ -80,7 +80,7 @@ export default function LevelPage(props) {
     let th = DataLoader.getTheorieData(d.theorie);
 
     // si le niveau est un bonus, alors afficher nom du niveau, si non => nom de la théroeir
-    if(th.name=="Bonus"){
+    if(d.name!=undefined || d.name!=""){
       setLevelName(`Niveau ${Number.parseInt(levelNumber.current)+1} : ${d.name}`);
     }
     else{
