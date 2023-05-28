@@ -1,4 +1,5 @@
-# regex_tool_tutorial
+![Logo](https://pbs.twimg.com/media/FxKLKi8aEAAzZGN?format=jpg&name=large "Logo")
+# regex Tool Tutorial
 Projet de TPI
 
 ## Level cération 
@@ -22,6 +23,7 @@ pour ajouter un level, il sufie d'ajouter un antrée dans le fichier "level.json
         "placeHolder":"",
         "limit":-1
     },
+```
 voicie de quoi il composer : 
 - startTheorie => si le niveau commence par une théorie ou non
 - thorieIndex => index de la thorie qui est relier au niveau, si pas de théorie = -1

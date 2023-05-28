@@ -24,7 +24,7 @@ export default class RegexSlideWord extends React.Component {
     // set la class de base du word
     this.baseWordClass="word "+((this.levelString.targetState)?"valide":"invalide");
 
-    // s'ajoute a la liste des regex shower du niveaux
+    // s'ajoute a la liste des regex shower du niveaux, garce a ça le niveau posède le render et l'objet et non pas juste le render
     props.slideList.push(this);
     this.UpdateRegex();
   }

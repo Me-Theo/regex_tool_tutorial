@@ -14,8 +14,11 @@ export default class SaveManger{
     static data;
 
     constructor(levelProgression,palet){
-        SaveManger.data=this;
-        this.levelProgression=levelProgression;     // progression actuelle du joueur, montre le nombre de nivaux que le joueur peu lancer 
+        SaveManger.data=this; 
+
+        // progression actuelle du joueur, montre le nombre de nivaux que le joueur peu lancer
+        this.levelProgression=levelProgression; 
+        
         this.palet=palet;
     }
 
