@@ -39,14 +39,18 @@
     </p>
     <p align="center">
         <img align="center" src="./media/ThoeriesPage.gif"  width="60%">
-        <img align="center" style="margin-top:15px;" src="./media/OneThoeriePage.gif"  width="60%">
+    </p>
+    <p align="center">
+        <img align="center" src="./media/OneThoeriePage.gif"  width="60%">
     </p>
     <p style="margin:15px">
         Pour rajouter des objectifs au joueur, le jeu propose également des palettes de couleurs à débloquer afin de personnaliser l'apparence du jeu à sa guise.
     </p>
     <p align="center">
         <img align="center" src="./media/MainMenu2.gif"  width="60%">
-        <img align="center" style="margin-top:15px;" src="./media/GamePlay2.gif"  width="60%">
+    </p>
+    <p align="center">
+        <img align="center" src="./media/GamePlay2.gif"  width="60%">
     </p>
 </p>
 
