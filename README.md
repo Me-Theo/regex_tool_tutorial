@@ -141,7 +141,7 @@ Voici de quoi il est composé :
 + **imagLink** => Nom de l'image d'illustration de la théorie, l'image doit se trouver dans le dossier **/src/image/TotuImag/**
 
 ## Création de pallette
-"Pour ajouter une palette de couleurs, il suffit d'ajouter une entrée dans le fichier **palette.json** qui se trouve dans le dossier **/src/ressources/data/**. Une entrée ressemble par exemple à ceci :
+Pour ajouter une palette de couleurs, il suffit d'ajouter une entrée dans le fichier **palette.json** qui se trouve dans le dossier **/src/ressources/data/**. Une entrée ressemble par exemple à ceci :
 ```JSON
 {
     "name":"Celeste",
