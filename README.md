@@ -15,7 +15,6 @@
     </h5>
     <h5 align="center" style="margin:5px">
         Supervisé par – Aurélie Curchod
-    </h5>
     <h5 align="center" style="margin:5px">
         Expertisé par – Nicolas Borboën et Suleyman Ceran
     </h5>
@@ -26,21 +25,29 @@
     <p style="margin:15px">
     « Regex Tool Tutorial » est un jeu qui a pour but de rendre ludique l’apprentissage des regex. 
     </p>
-    <img align="center" style="border-radius: 15px; margin-left:20%" src="./media/MainMenu.gif"  width="60%">
+    <p align="center">
+        <img align="center" style="border-radius:5px" src="./media/MainMenu.gif"  width="60%">
+    </p>
     <p style="margin-top:10px">
         Chaque niveau présente des chaînes de caractères. Le joueur doit créer une expression régulière (regex) qui permet de valider une partie de ces chaînes et d'invalider les autres. Ainsi, le joueur devra utiliser ses connaissances en regex afin de venir à bout de tous les niveaux proposés par le jeu.
     </p>
-    <img style="border-radius: 15px; margin-left:20%" src="./media/GamePlay1.gif"  width="60%">
-    <p style="margin:15px">
+    <p align="center">
+        <img src="./media/GamePlay1.gif"  width="60%">
+    </p>
+    </p>
         Pour l'aider, le jeu propose des petits tutoriels qui permettent d'expliquer et de vulgariser les aspects de base de la création de regex.
     </p>
-    <img align="center" style="border-radius: 15px; margin-left:20%" src="./media/ThoeriesPage.gif"  width="60%">
-    <img align="center" style="border-radius: 15px; margin-top:15px; margin-left:20%" src="./media/OneThoeriePage.gif"  width="60%">
+    <p align="center">
+        <img align="center" src="./media/ThoeriesPage.gif"  width="60%">
+        <img align="center" style="margin-top:15px;" src="./media/OneThoeriePage.gif"  width="60%">
+    </p>
     <p style="margin:15px">
         Pour rajouter des objectifs au joueur, le jeu propose également des palettes de couleurs à débloquer afin de personnaliser l'apparence du jeu à sa guise.
     </p>
-        <img align="center" style="border-radius: 15px; margin-left:20%" src="./media/MainMenu2.gif"  width="60%">
-    <img align="center" style="border-radius: 15px; margin-top:15px;margin-left:20%" src="./media/GamePlay2.gif"  width="60%">
+    <p align="center">
+        <img align="center" src="./media/MainMenu2.gif"  width="60%">
+        <img align="center" style="margin-top:15px;" src="./media/GamePlay2.gif"  width="60%">
+    </p>
 </p>
 
 ## Comment y jouer
