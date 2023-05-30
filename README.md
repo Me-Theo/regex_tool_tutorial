@@ -58,7 +58,7 @@ Il y a deux manières d'y accéder.
 ## Comment l'installer
 Alors, tout d'abord, il vous faut **NPM**. Vous pouvez l'installer en vous rendant à ce [lien](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm "Downloading and installing Node.js and npm").
 
-Lorsque **NPM** est installé, vous devez ensuite installer **Node.js (v14.15.4)**. Pour cela, utilisez la commande suivante pour Windows  :
+Lorsque **NPM** est installé, vous devez ensuite installer **Node.js (v14.15.4)**. Pour cela, utilisez la commande suivante :
 ```
 npm install -g node@14.15.4
 ```
