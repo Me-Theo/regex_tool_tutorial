@@ -35,6 +35,11 @@
         "imagLink":"CommencePar.png"
     },
     {
+        "name":"Fini par",
+        "text":"Dans une range dans une regex, le caractère \"$\" utilisé à la fin indique la fin d'une ligne ou d'une chaîne de caractères. Il permet de rechercher une correspondance avec le motif seulement s'il se trouve à la fin de la ligne ou de la chaîne.",
+        "imagLink":"EndBy.png"
+    },
+    {
         "name":"Ne dois pas match",
         "text":"Dans une regex, le symbole \"?!\" est utilisé pour représenter une assertion négative. Il permet de rechercher des motifs qui ne sont pas suivis d'un certain élément spécifié, donnant ainsi une condition d'exclusion lors de la recherche de correspondances.",
         "imagLink":"NePas.png"

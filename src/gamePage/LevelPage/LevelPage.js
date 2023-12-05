@@ -203,9 +203,9 @@ export default function LevelPage(props) {
 
   function inputUpdateAnimation()
   {
-    playerInput.current.className="";
+    playerInput.current.className="inputHolder ";
     void playerInput.current.offsetWidth;
-    playerInput.current.className="inputUpdate";
+    playerInput.current.className+="inputUpdate";
   }
 
   //#endregion
@@ -345,4 +345,7 @@ export default function LevelPage(props) {
     </div>
   );
 }
+
+
+
 

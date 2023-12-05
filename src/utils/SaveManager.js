@@ -43,11 +43,12 @@ export default class SaveManger{
                     break;
                 }
             }
-            actualData=new SaveManger(d.levelProgression,d.palet);
+            actualData=(d==null || d.levelProgression==undefined || d.palet==undefined)?new SaveManger(0,0):new SaveManger(d.levelProgression,d.palet);
             this.save();
         }
         return actualData;
     }
+    
 
 
     /**

@@ -39,7 +39,7 @@ export default function TheoriePage(props) {
         /** load l'image */
         const fetchImage = async () => {
             try {
-                const response = await import(`../../ressources/image/TutoImag/${data.imagLink}`) // change relative path to suit your needs
+                const response = await import(`../../ressources/image/TutoImag/${data.imagLink}`) // path relatife 
                 setImgsrc(response.default);;
             } catch (err) {
                 console.log(err);
