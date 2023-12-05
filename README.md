@@ -16,7 +16,7 @@
     <h5 align="center" style="margin:5px">
         Supervisé par – Aurélie Curchod
     <h5 align="center" style="margin:5px">
-        Expertisé par – Nicolas Borboën et Suleyman Ceran
+        Expertisé par – Nicolas Borboën et Süleyman Ceran
     </h5>
 </p>
 
